@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <div
       className={`${
-        collapse ? "w-[182px]" : "w-[72px]"
+        collapse ? "w-[192px]" : "w-[72px]"
       } transition-all duration-300 h-screen px-4 py-5 shadow-sideShad sticky top-0 flex flex-col items-center justify-between overflow-x-hidden overflow-y-auto`}
     >
       <ul className="w-full flex flex-col items-center justify-center gap-10">
@@ -22,14 +22,20 @@ const Sidebar = () => {
             <NavLink
               to={item.to}
               key={i}
-              className="w-fit flex items-center justify-center gap-4 py-3 px-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative"
+              className={`flex items-center gap-4 py-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative ${
+                collapse
+                  ? "justify-start w-full px-2"
+                  : "justify-center w-fit px-3"
+              }`}
             >
               <span>
                 <item.icon className="w-6 h-6" />
               </span>
               <span
                 className={`absolute ${
-                  collapse ? "opacity-100 scale-100" : "opacity-0 scale-0"
+                  collapse
+                    ? "opacity-100 scale-100 relative"
+                    : "opacity-0 scale-0"
                 } transition-all duration-300`}
               >
                 {item.text}
@@ -40,7 +46,11 @@ const Sidebar = () => {
             onClick={() => {
               setCollapse(!collapse);
             }}
-            className="w-fit flex items-center justify-center gap-4 py-2 px-2 rounded-lg hover:bg-hovergray transition-all duration-300 relative"
+            className={`flex items-center gap-4 py-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative ${
+              collapse
+                ? "justify-start w-full px-2"
+                : "justify-center w-fit px-3"
+            }`}
           >
             <BiChevronLeft
               className={`w-7 h-7 ${
@@ -49,7 +59,9 @@ const Sidebar = () => {
             />
             <span
               className={`absolute ${
-                collapse ? "opacity-100 scale-100" : "opacity-0 scale-0"
+                collapse
+                  ? "opacity-100 scale-100 relative"
+                  : "opacity-0 scale-0"
               } transition-all duration-300`}
             >
               {collapse ? "Collapse" : "Expand"}

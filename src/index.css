@@ -6,7 +6,18 @@
   font-family: "Poppins", sans-serif;
 }
 
-img{
+img {
   user-select: none;
   -webkit-user-drag: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #182634;
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: #a2a7ac;
 }
