@@ -1,6 +1,6 @@
 import { GrHomeRounded } from "react-icons/gr";
 import { RxShare1 } from "react-icons/rx";
-import { BsHeart, BsTag } from "react-icons/bs";
+import { BsHeart } from "react-icons/bs";
 import { FaRegFileAlt } from "react-icons/fa";
 import {
   PiUsersThreeBold,
@@ -196,8 +196,3 @@ export const selectOptions = [
   },
 ];
 
-export const headerIconsLinks = [
-  {
-    icon: BsTag,
-  },
-];
