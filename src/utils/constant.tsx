@@ -156,3 +156,18 @@ export const candidateData = [
     coverImage: "AS",
   },
 ];
+
+export const selectOptions = [
+  {
+    text: "Applied",
+    totalNumber: "1745",
+  },
+  {
+    text: "Shortlisted",
+    totalNumber: "453",
+  },
+  {
+    text: "Technical Interview",
+    totalNumber: "123",
+  },
+];
