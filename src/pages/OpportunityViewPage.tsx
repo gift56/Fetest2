@@ -49,7 +49,7 @@ const OpportunityViewPage = () => {
                       <span
                         className={`${
                           item.status ? "bg-[#F0F6FF]" : "bg-[#FFF3F0]"
-                        } flex items-center gap-1 text-xs font-normal text-dark`}
+                        } flex items-center gap-1 text-xs font-normal text-dark py-1 px-2 rounded-2xl`}
                       >
                         <PiTrendUpLight className={``} />
                         <span>15</span>
