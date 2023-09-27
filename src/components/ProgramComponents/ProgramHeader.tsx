@@ -49,7 +49,9 @@ const ProgramHeader = () => {
         <div
           ref={selectRef}
           className={`${
-            openSelect ? "scale-x-100 opacity-100 top-12" : "scale-x-0 opacity-0 top-0"
+            openSelect
+              ? "scale-x-100 opacity-100 top-12"
+              : "scale-x-0 opacity-0 top-0"
           } w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl shadow-selectShad z-10 transition-all duration-300`}
         >
           {selectOptions.map((item) => (
@@ -75,8 +77,8 @@ const ProgramHeader = () => {
             </div>
           ))}
         </div>
-        <div></div>
       </div>
+      <div className="flex items-center justify-end gap-6"></div>
     </nav>
   );
 };
