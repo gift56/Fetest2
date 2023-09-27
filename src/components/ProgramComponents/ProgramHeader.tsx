@@ -5,7 +5,7 @@ const ProgramHeader = () => {
   const [selectedItem, setSelectedItem] = useState("Opportunity Browsing");
   const selctRef = useRef<HTMLDivElement>(null);
 
-  const reSort = (item: string) => {
+  const openSelection = (item: string) => {
     setSelectedItem(item);
     setOpenSelect(false);
   };
