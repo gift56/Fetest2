@@ -95,13 +95,13 @@ const ProgramViewPage = () => {
           </div>
           <div className="w-full lg:flex-[2.5] bg-white flex flex-col items-start justify-start rounded-lg h-screen overflow-y-auto overflow-x-hidden">
             <div className="p-4 flex items-center justify-between gap-4 w-full border-b">
-              <div className="flex items-center justify-start gap-2">
+              <div className="flex items-center justify-start gap-2 select-none">
                 <input type="checkbox" />
                 <p className="text-sm font-semibold text-primary">
                   247 Candidates
                 </p>
               </div>
-              <div className="flex items-center justify-end gap-6">
+              <div className="flex items-center justify-end gap-6 select-none">
                 <p className="text-sm font-medium text-primary">Qualified</p>
                 <p className="text-sm font-medium text-dark flex items-center gap-2">
                   <span>Task</span>
