@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown, BiUserVoice } from "react-icons/bi";
 import { GoTag } from "react-icons/go";
 import { FiUserX, FiUserCheck } from "react-icons/fi";
 import { selectOptions } from "../../utils/constant";
@@ -89,6 +89,9 @@ const ProgramHeader = () => {
         </span>
         <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg">
           <FiUserCheck className="w-5 h-5" />
+        </span>
+        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg">
+          <BiUserVoice className="w-5 h-5" />
         </span>
       </div>
     </nav>
