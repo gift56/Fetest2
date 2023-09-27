@@ -52,5 +52,7 @@ export const candidateData = [
     name: "Aaliyah Sanderson",
     nationality: "Riyadh, Saudi Arabia",
     education: "Bachelor - Cambridge University (2023 - 2023)",
+    tag: ["#top_candidate", "#top_candidate"],
+    experience: ["New York", "Marketing", "London"],
   },
 ];
