@@ -70,7 +70,7 @@ const Sidebar = () => {
           </button>
         </nav>
       </ul>
-      <div className="w-full flex flex-col items-center justify-center gap-10 mt-20 laptop:mt-0">
+      <div className="w-full flex flex-col items-center justify-center gap-9 mt-20 laptop:mt-0">
         <span
           className={`flex items-center gap-4 py-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative ${
             collapse ? "justify-start w-full px-2" : "justify-center w-fit px-3"
