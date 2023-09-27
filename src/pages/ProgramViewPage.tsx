@@ -1,9 +1,10 @@
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import { ProgramHeader } from "../components";
 import MainLayout from "../layout/MainLayout";
 import { GoSearch } from "react-icons/go";
 
 const ProgramViewPage = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
