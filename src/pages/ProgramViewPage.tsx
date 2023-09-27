@@ -18,9 +18,21 @@ const ProgramViewPage = () => {
   const [search, setSearch] = useState("");
 
   const keys = ["name", "nationality", "education", "tag", "experience"];
-  const searchTerm = (data: Data[]) => {
-    return data.filter((item: any) =>
-      keys.some((key) => item[key].toLowerCase().includes(search))
+
+  const searchTerm = (data: Data[], keys: (keyof Data)[], search: string) => {
+    return data.filter((item) =>
+      keys.some((key) => {
+        const value = item[key];
+        if (typeof value === "string") {
+          return value.toLowerCase().includes(search);
+        } else if (
+          Array.isArray(value) &&
+          value.every((v) => typeof v === "string")
+        ) {
+          return value.some((v) => v.toLowerCase().includes(search));
+        }
+        return false;
+      })
     );
   };
 
