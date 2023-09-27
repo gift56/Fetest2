@@ -19,12 +19,12 @@ export const sidebarLink = [
     to: "/",
   },
   {
-    text: "Application Review",
+    text: "Application",
     icon: RxShare1,
     to: "/application",
   },
   {
-    text: "Opportunity overview",
+    text: "Opportunity",
     icon: RxShare1,
     to: "/opportunity",
   },
