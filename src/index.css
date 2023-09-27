@@ -21,3 +21,8 @@ img {
 ::-webkit-scrollbar-track {
   background-color: #a2a7ac;
 }
+
+.active {
+  color: #1d4ed8;
+  background-color: #e9efff;
+}
