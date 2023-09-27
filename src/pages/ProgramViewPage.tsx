@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import { ProgramHeader } from "../components";
 import MainLayout from "../layout/MainLayout";
 import { GoSearch } from "react-icons/go";
+import { PiWarningCircleLight } from "react-icons/pi";
 
 const ProgramViewPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -20,8 +21,18 @@ const ProgramViewPage = () => {
               onSubmit={handleSubmit}
               className="w-full h-12 bg-white border border-[#F3F3F3] rounded-lg flex items-center justify-between gap-5"
             >
-              <button type="submit" className="px-3 h-full flex items-center justify-center text-inputgray">
+              <button
+                type="submit"
+                className="px-3 h-full flex items-center justify-center text-inputgray"
+              >
                 <GoSearch className="w-5 h-5" />
+              </button>
+              <input type="text" className="w-full h-full bg-red-500" />
+              <button
+                type="button"
+                className="px-3 h-full flex items-center justify-center text-inputgray"
+              >
+                <PiWarningCircleLight className="w-5 h-5" />
               </button>
             </form>
           </div>
