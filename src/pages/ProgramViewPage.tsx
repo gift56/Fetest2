@@ -19,7 +19,7 @@ const ProgramViewPage = () => {
           <div className="w-full lg:flex-[1] flex flex-col gap-5 items-start justify-start">
             <form
               onSubmit={handleSubmit}
-              className="w-full h-12 bg-white border border-[#F3F3F3] rounded-lg flex items-center justify-between gap-5"
+              className="w-full h-12 bg-white border border-[#F3F3F3] rounded-lg flex items-center justify-between"
             >
               <button
                 type="submit"
@@ -30,7 +30,7 @@ const ProgramViewPage = () => {
               <input type="text" className="w-full h-full bg-red-500" />
               <button
                 type="button"
-                className="px-3 h-full flex items-center justify-center text-inputgray"
+                className="pr-3 h-full flex items-center justify-center text-inputgray"
               >
                 <PiWarningCircleLight className="w-5 h-5" />
               </button>
