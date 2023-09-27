@@ -67,9 +67,9 @@ export const candidateData = [
   },
   {
     id: "003020202030302002",
-    name: "John Doe",
-    nationality: "Bostom, USA",
-    education: "Bachelor - MIT (2023 - 2023)",
+    name: "Thomas Matt",
+    nationality: "Edinburgh, UK",
+    education: "Bachelor - Harvard University (2023 - 2023)",
     tag: ["#top_candidate", "#top_candidate"],
     experience: ["New York", "Marketing", "London"],
     coverImage: "AS",
