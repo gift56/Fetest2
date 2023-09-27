@@ -89,7 +89,13 @@ const ProgramHeader = () => {
             <item.icon className="w-5 h-5" />
           </span>
         ))}
-        <div className="flex items-center justify-between"></div>
+        <button
+          type="button"
+          className="flex items-center justify-between bg-primary text-white text-sm font-normal outline-none h-10"
+        >
+          <span>Move To Video Interview I</span>
+          <span></span>
+        </button>
       </div>
     </nav>
   );
