@@ -7,7 +7,7 @@ import { PiWarningCircleLight } from "react-icons/pi";
 const ProgramViewPage = () => {
   const [search, setSearch] = useState("");
 
-  const keys = ["name", "sector", "counts", "status"];
+  const keys = ["name", "nationality", "education", "tag"];
   const searchTerm = (data: any) => {
     return data.filter((item: any) =>
       keys.some((key) => item[key].toLowerCase().includes(search))
