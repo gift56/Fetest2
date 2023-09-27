@@ -35,11 +35,22 @@ const OpportunityViewPage = () => {
                   <h2 className="text-sm font-medium text-dark">
                     {item.headline}
                   </h2>
-                  <h1 className="text-base md:text-xl font-medium text-dark">{item.total}</h1>
+                  <h1 className="text-base md:text-xl font-medium text-dark">
+                    {item.total}
+                  </h1>
                   <div className="flex flex-col items-start w-full gap-2">
-                    <p className="text-sm font-normal text-dark">Previous Period</p>
+                    <p className="text-sm font-normal text-dark">
+                      Previous Period
+                    </p>
                     <div className="flex items-center justify-start gap-2">
-                      <span className="text-xs font-normal text-dark"></span>
+                      <span className="text-xs font-normal text-dark">
+                        {item.previousNo}
+                      </span>
+                      <span
+                        className={`${
+                          item.status ? "bg-[#F0F6FF]" : "bg-[#FFF3F0]"
+                        }`}
+                      ></span>
                     </div>
                   </div>
                 </div>
