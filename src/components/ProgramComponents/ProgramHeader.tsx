@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
+import { selectOptions } from "../../utils/constant";
 
 const ProgramHeader = () => {
   const [openSelect, setOpenSelect] = useState(false);
@@ -44,6 +45,15 @@ const ProgramHeader = () => {
         >
           <span className="text-base font-medium">{selectedItem}</span>
           <BiChevronDown className="w-5 h-5" />
+        </div>
+        <div
+          className={`w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl`}
+        >
+          {selectOptions.map((item) => (
+            <div key={item.text} className="w-full border-b flex items-center last:rounded-bl-2xl last:rounded-br-2xl last:border-none justify-between gap-4 shadow-selectShad hover:bg-hovergray hover:text-primary cursor-pointer transition-all text-dark py-4 px-4">
+                <span className="text-base font-normal">{item.text}</span>
+            </div>
+          ))}
         </div>
       </div>
     </nav>
