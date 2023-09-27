@@ -120,9 +120,11 @@ const ProgramViewPage = () => {
             </div>
             {data.map((item) => (
               <div
-                className="p-4 flex items-center group justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300 cursor-pointer"
+                className="p-4 flex flex-col items-center w-full border-b last:border-none hover:bg-hovergray transition-all duration-300 cursor-pointer"
                 key={item.id}
-              ></div>
+              >
+                <div className="flex items-center justify-start gap-10"></div>
+              </div>
             ))}
           </div>
         </div>
