@@ -60,7 +60,7 @@ const ProgramHeader = () => {
             >
               <span className="text-base">{item.text}</span>
               <span
-                className={`text-sm w-fit py-1 px-2 ${
+                className={`text-sm w-fit py-1 px-2 rounded-2xl ${
                   selectedItem === item.text
                     ? "bg-[#D1DDFF] text-primary"
                     : " bg-[#F8F8F8] text-[#444444]"
