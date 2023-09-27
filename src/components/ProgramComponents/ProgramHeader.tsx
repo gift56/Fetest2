@@ -5,9 +5,17 @@ const ProgramHeader = () => {
   const [selectedItem, setSelectedItem] = useState("Opportunity Browsing");
   const selctRef = useRef<HTMLDivElement>(null);
 
+  const reSort = (item: string) => {
+    setSelectedItem(item);
+    setOpenSelect(false);
+  };
+
   useEffect(() => {
-    const handleClickOutside:EventListener = (event) => {
-      if (selctRef.current && !selctRef.current.contains(event.target as Node)) {
+    const handleClickOutside: EventListener = (event) => {
+      if (
+        selctRef.current &&
+        !selctRef.current.contains(event.target as Node)
+      ) {
         setOpenSelect(false);
       }
     };
