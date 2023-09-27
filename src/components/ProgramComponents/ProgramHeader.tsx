@@ -37,8 +37,11 @@ const ProgramHeader = () => {
         </h2>
         <span className="text-sm text-dark font-normal">London</span>
       </div>
-      <div className="flex flex-col items-center justify-start w-[321px] h-10 gap-3 bg-white shadow-selectShad rounded-2xl text-primary relative">
-        <div className="w-full flex items-center"></div>
+      <div className="flex flex-col items-center justify-start w-[321px] h-10 gap-3 bg-white shadow-selectShad rounded-2xl relative">
+        <div className="w-full flex items-center justify-between cursor-pointer h-full px-4 text-primary">
+          <span className="text-base font-medium">{selectedItem}</span>
+          <BiChevronDown className="w-5 h-5" />
+        </div>
       </div>
     </nav>
   );
