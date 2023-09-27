@@ -11,7 +11,7 @@ const OpportunityViewPage = () => {
             Opportunity Overview
           </h2>
           <div className="flex items-center justify-end gap-6">
-            <span className="flex items-center gap-3 text-sm font-medium text-dark">
+            <span className="flex items-center gap-3 text-sm font-medium text-dark cursor-pointer">
               <span>London Internship Program</span>
               <BiChevronDown className="w-4 h-4" />
             </span>
