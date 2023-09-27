@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { sidebarLink } from "../utils/constant";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { BiChevronLeft } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 
 const Sidebar = () => {
   const [collapse, setCollapse] = useState(false);
 
-  const param = useParams();
-  console.log(param);
+  const location = useLocation();
 
   return (
     <div
@@ -26,10 +25,14 @@ const Sidebar = () => {
             <NavLink
               to={item.to}
               key={i}
-              className={`flex items-center active gap-4 py-3 rounded-lg first:bg-hovergray first:text-primary hover:bg-hovergray transition-all duration-300 relative ${
+              className={`flex items-center gap-4 py-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative ${
                 collapse
                   ? "justify-start w-full px-2"
                   : "justify-center w-fit px-3"
+              } ${
+                location.pathname === item.to
+                  ? "bg-hovergray text-primary"
+                  : ""
               }`}
             >
               <span>
