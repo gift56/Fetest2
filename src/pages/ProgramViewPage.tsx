@@ -128,7 +128,7 @@ const ProgramViewPage = () => {
                   <div className="select-none w-20 h-20 rounded-full flex items-center justify-center bg-[#EDF4FF] text-[#D0E1FF]">
                     <span>{item.coverImage}</span>
                   </div>
-                  <div className="flex flex-col items-start justify-start">
+                  <div className="flex flex-col items-start justify-start gap-2">
                     <h2 className="text-sm font-semibold text-black">
                       {item.name}
                     </h2>
@@ -141,6 +141,11 @@ const ProgramViewPage = () => {
                     <p className="text-xs font-normal text-primary flex items-center justify-start gap-4">
                       {item.tag.map((item, i) => (
                         <span key={i}>{item}</span>
+                      ))}
+                    </p>
+                    <p className="text-xs font-medium text-[#037092] flex items-center justify-start gap-4">
+                      {item.experience.map((item, i) => (
+                        <span key={i} className="bg-[#F3FAFC] py-2 px-4 rounded-xl">{item}</span>
                       ))}
                     </p>
                   </div>
