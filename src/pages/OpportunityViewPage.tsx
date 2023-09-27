@@ -38,7 +38,9 @@ const OpportunityViewPage = () => {
                   <h1 className="text-base md:text-xl font-medium text-dark">{item.total}</h1>
                   <div className="flex flex-col items-start w-full gap-2">
                     <p className="text-sm font-normal text-dark">Previous Period</p>
-                    <div className="flex items-center justify-start gap-2"></div>
+                    <div className="flex items-center justify-start gap-2">
+                      <span className="text-xs font-normal text-dark"></span>
+                    </div>
                   </div>
                 </div>
               ))}
