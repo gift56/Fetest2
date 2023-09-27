@@ -22,7 +22,9 @@ const OpportunityViewPage = () => {
             </span>
           </div>
         </div>
-        
+        <div className="w-full flex items-start justify-between flex-col lg:flex-row gap-6">
+          
+        </div>
       </div>
     </MainLayout>
   );
