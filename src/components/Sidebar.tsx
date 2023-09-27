@@ -36,6 +36,14 @@ const Sidebar = () => {
               </span>
             </NavLink>
           ))}
+          <button
+            onClick={() => {
+              setCollapse(!collapse);
+            }}
+            className="w-fit flex items-center justify-center gap-4 py-3 px-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative"
+          >
+            <BiChevronLeft className="w-7 h-7" />
+          </button>
         </nav>
       </ul>
     </div>
