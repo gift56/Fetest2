@@ -70,7 +70,9 @@ const ProgramViewPage = () => {
               </button>
             </form>
             <div className="w-full flex flex-col items-start justify-start bg-white rounded-lg overflow-hidden">
-              <div className="py-4"></div>
+              <div className="py-4 flex items-center justify-between gap-4 w-full">
+                
+              </div>
             </div>
           </div>
           <div className="w-full lg:flex-[2.5]"></div>
