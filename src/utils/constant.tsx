@@ -65,4 +65,13 @@ export const candidateData = [
     experience: ["New York", "Marketing", "London"],
     coverImage: "AS",
   },
+  {
+    id: "002020202030302002",
+    name: "John Doe",
+    nationality: "Bostom, USA",
+    education: "Bachelor - MIT (2023 - 2023)",
+    tag: ["#top_candidate", "#top_candidate"],
+    experience: ["New York", "Marketing", "London"],
+    coverImage: "AS",
+  },
 ];
