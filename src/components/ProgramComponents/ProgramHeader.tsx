@@ -54,7 +54,7 @@ const ProgramHeader = () => {
               ref={selectRef}
               onClick={() => openSelection(item.text)}
               key={item.text}
-              className={`w-full border-b flex items-center last:rounded-bl-2xl last:rounded-br-2xl last:border-none justify-between gap-4 shadow-selectShad hover:bg-hovergray hover:text-primary cursor-pointer transition-all text-dark py-4 px-4 ${
+              className={`${openSelect?"flex":"hidden"} w-full border-b items-center last:rounded-bl-2xl last:rounded-br-2xl last:border-none justify-between gap-4 shadow-selectShad hover:bg-hovergray hover:text-primary cursor-pointer transition-all text-dark py-4 px-4 ${
                 selectedItem === item.text
                   ? "bg-hovergray text-primary font-medium"
                   : " font-normal"
