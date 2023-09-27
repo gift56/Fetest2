@@ -4,6 +4,7 @@ import MainLayout from "../layout/MainLayout";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
 import { possibleFilter } from "../utils/constant";
+import { FaRegFileAlt } from "react-icons/fa";
 
 interface Data {
   id: string;
@@ -76,8 +77,13 @@ const ProgramViewPage = () => {
                 <p className="text-xs font-normal text-dark">0 Selected</p>
               </div>
               {possibleFilter.map((item, i) => (
-                <div className="p-4 flex items-center justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300" key={i}>
-                  <div className="item"></div>
+                <div
+                  className="p-4 flex items-center justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300"
+                  key={i}
+                >
+                  <div className="flex items-center justify-start gap-2">
+                    <FaRegFileAlt className="w-4 h-4" />
+                  </div>
                 </div>
               ))}
             </div>
