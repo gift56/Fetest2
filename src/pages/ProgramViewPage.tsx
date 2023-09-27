@@ -128,6 +128,9 @@ const ProgramViewPage = () => {
                   <div className="select-none w-20 h-20 rounded-full flex items-center justify-center bg-[#EDF4FF] text-[#D0E1FF]">
                     <span>{item.coverImage}</span>
                   </div>
+                  <div className="flex flex-col items-start justify-start">
+                    <h2></h2>
+                  </div>
                 </div>
               </div>
             ))}
