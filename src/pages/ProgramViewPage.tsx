@@ -13,7 +13,7 @@ const ProgramViewPage = () => {
         <ProgramHeader />
         <div className="w-full flex flex-col lg:flex-row items-start justify-start gap-6">
           <div className="w-full lg:flex-[1] flex flex-col gap-5 items-start justify-start">
-            <form onSubmit={handleSubmit}></form>
+            <form onSubmit={handleSubmit} className="w-full h-12 bg-white border border-[#F3F3F3] rounded-lg flex items-center justify-between gap-5"></form>
           </div>
           <div className="w-full lg:flex-[2.5]"></div>
         </div>
