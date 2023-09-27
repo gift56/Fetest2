@@ -1,4 +1,4 @@
-import { GoHome } from "react-icons/go";
+import { GoHome, GoTag } from "react-icons/go";
 import { RxShare1 } from "react-icons/rx";
 import { BsHeart } from "react-icons/bs";
 import { FaRegFileAlt } from "react-icons/fa";
@@ -7,6 +7,9 @@ import {
   PiCalendarCheckLight,
   PiNotebookLight,
 } from "react-icons/pi";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { FiUserX, FiUserCheck } from "react-icons/fi";
+import { BiUserVoice } from "react-icons/bi";
 
 export const sidebarLink = [
   {
@@ -196,3 +199,10 @@ export const selectOptions = [
   },
 ];
 
+export const moreInfoIcons = [
+  { icon: GoTag },
+  { icon: FiUserX, danger: true },
+  { icon: FiUserCheck },
+  { icon: BiUserVoice },
+  { icon: HiOutlineEnvelope },
+];

@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { BiChevronDown, BiUserVoice } from "react-icons/bi";
-import { GoTag } from "react-icons/go";
-import { HiOutlineEnvelope } from "react-icons/hi2";
-import { FiUserX, FiUserCheck } from "react-icons/fi";
-import { selectOptions } from "../../utils/constant";
+import { BiChevronDown } from "react-icons/bi";
+import { moreInfoIcons, selectOptions } from "../../utils/constant";
 
 const ProgramHeader = () => {
   const [openSelect, setOpenSelect] = useState(false);
@@ -82,21 +79,16 @@ const ProgramHeader = () => {
         </div>
       </div>
       <div className="flex items-center justify-end gap-4">
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
-          <GoTag className="w-5 h-5" />
-        </span>
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#A80000] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
-          <FiUserX className="w-5 h-5" />
-        </span>
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
-          <FiUserCheck className="w-5 h-5" />
-        </span>
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
-          <BiUserVoice className="w-5 h-5" />
-        </span>
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
-          <HiOutlineEnvelope className="w-5 h-5" />
-        </span>
+        {moreInfoIcons.map((item, i) => (
+          <span
+            key={i}
+            className={`shadow-iconShad bg-white border-[0.5px] border-[#ECECEC w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer ${
+              item.danger === true ? "text-[#A80000]" : "text-[#444444]"
+            }`}
+          >
+            <item.icon className="w-5 h-5" />
+          </span>
+        ))}
       </div>
     </nav>
   );
