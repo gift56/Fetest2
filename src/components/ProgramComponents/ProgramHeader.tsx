@@ -15,8 +15,8 @@ const ProgramHeader = () => {
   useEffect(() => {
     const handleClickOutside: EventListener = (event) => {
       if (
-        selctRef.current &&
-        !selctRef.current.contains(event.target as Node)
+        selectRef.current &&
+        !selectRef.current.contains(event.target as Node)
       ) {
         setOpenSelect(false);
       }
