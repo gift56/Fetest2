@@ -20,6 +20,19 @@ ChartJS.register(
   Legend
 );
 
+export const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "right" as const,
+    },
+    title: {
+      display: true,
+      text: "Inflow - Outflow",
+    },
+  },
+};
+
 const RecommendedChart = () => {
   return (
     <div className="bg-white w-full border border-[#E7E8E7] rounded-2xl p-8 hidden lg:flex flex-col shadow-cardShad">
