@@ -24,7 +24,11 @@ const Sidebar = () => {
               <span>
                 <item.icon className="w-6 h-6" />
               </span>
-              <span className="absolute opacity-0">{item.text}</span>
+              <span
+                className={`absolute ${collapse ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}
+              >
+                {item.text}
+              </span>
             </NavLink>
           ))}
         </nav>
