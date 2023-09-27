@@ -35,6 +35,10 @@ export const options = {
 
 const labels = ["January", "Ferbuary", "March", "April", "May", "June", "July"];
 
+const qualifiedData = [250, 750, 600, 400, 200, 300, 660];
+
+const disqualifiedData = [250, 350, 200, 350, 200, 300, 560];
+
 const RecommendedChart = () => {
   return (
     <div className="bg-white w-full border border-[#E7E8E7] rounded-2xl p-8 hidden lg:flex flex-col shadow-cardShad"></div>
