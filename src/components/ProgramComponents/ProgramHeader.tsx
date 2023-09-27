@@ -91,7 +91,7 @@ const ProgramHeader = () => {
         ))}
         <button
           type="button"
-          className="flex items-center relative justify-between bg-primary text-white text-sm font-normal outline-none h-10 rounded-lg"
+          className="flex items-center relative justify-between bg-primary hover:opacity-90 transition-all duration-300 text-white text-sm font-normal outline-none h-10 rounded-lg"
         >
           <span className="px-2 truncate">Move To Video Interview I</span>
           <span className="h-full border-l-2 border-white flex items-center justify-center px-2">
