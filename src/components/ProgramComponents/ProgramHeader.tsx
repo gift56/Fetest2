@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { BiChevronDown } from "react-icons/bi";
 
 const ProgramHeader = () => {
   const [openSelect, setOpenSelect] = useState(false);
@@ -36,6 +37,7 @@ const ProgramHeader = () => {
         </h2>
         <span className="text-sm text-dark font-normal">London</span>
       </div>
+      <div></div>
     </nav>
   );
 };
