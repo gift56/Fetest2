@@ -28,7 +28,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Inflow - Outflow",
+      text: "Qualified - Disqualified",
     },
   },
 };
