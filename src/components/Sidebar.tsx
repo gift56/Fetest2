@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { sidebarLink } from "../utils/constant";
 import { NavLink } from "react-router-dom";
+import { BiChevronLeft } from "react-icons/bi";
 
 const Sidebar = () => {
   const [collapse, setCollapse] = useState(false);
