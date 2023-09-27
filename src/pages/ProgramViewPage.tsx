@@ -96,7 +96,9 @@ const ProgramViewPage = () => {
           <div className="w-full lg:flex-[2.5] bg-white flex flex-col items-start justify-start rounded-lg h-screen overflow-y-auto overflow-x-hidden">
             <div className="p-4 flex items-center justify-between gap-4 w-full border-b">
               <input type="checkbox" />
-              <p className="text-sm font-semibold">247 Candidates</p>
+              <p className="text-sm font-semibold text-primary">
+                247 Candidates
+              </p>
             </div>
           </div>
         </div>
