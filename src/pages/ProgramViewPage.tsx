@@ -20,6 +20,12 @@ interface Data {
 const ProgramViewPage = () => {
   const [data, setData] = useState(candidateData);
   const [search, setSearch] = useState("");
+  const [selectedItems, setSelectedItems] = useState<Data[]>([]);
+
+  const handleItemClick = (item: Data) => {
+    const updatedSelectedItems = [...selectedItems, item];
+    setSelectedItems(updatedSelectedItems);
+  };
 
   const keys: (keyof Data)[] = [
     "name",
