@@ -37,7 +37,7 @@ const ProgramHeader = () => {
         </h2>
         <span className="text-sm text-dark font-normal">London</span>
       </div>
-      <div className="flex items-center w-[321px]"></div>
+      <div className="flex items-center w-[321px] h-10 gap-3 bg-white shadow-selectShad rounded-2xl text-primary"></div>
     </nav>
   );
 };
