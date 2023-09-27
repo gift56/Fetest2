@@ -48,7 +48,9 @@ export const sidebarLink = [
 
 export const candidateData = [
   {
-    id:"001020202030302002",
-    name: "",
+    id: "001020202030302002",
+    name: "Aaliyah Sanderson",
+    nationality: "Riyadh, Saudi Arabia",
+    education: "Bachelor - Cambridge University (2023 - 2023)",
   },
 ];
