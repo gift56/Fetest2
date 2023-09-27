@@ -1,6 +1,6 @@
 import { GrHomeRounded } from "react-icons/gr";
 import { RxShare1 } from "react-icons/rx";
-import { BsHeart } from "react-icons/bs";
+import { BsHeart, BsTag } from "react-icons/bs";
 import { FaRegFileAlt } from "react-icons/fa";
 import {
   PiUsersThreeBold,
@@ -193,5 +193,11 @@ export const selectOptions = [
   {
     text: "Withdrawn",
     totalNumber: "25",
+  },
+];
+
+export const headerIconsLinks = [
+  {
+    icon: BsTag,
   },
 ];
