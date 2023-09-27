@@ -23,4 +23,9 @@ export const sidebarLink = [
     icon: RxShare1,
     to: "/application",
   },
+  {
+    text: "Opportunity overview",
+    icon: RxShare1,
+    to: "/opportunity",
+  },
 ];
