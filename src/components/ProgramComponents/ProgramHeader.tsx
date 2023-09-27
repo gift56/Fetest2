@@ -59,7 +59,13 @@ const ProgramHeader = () => {
               }`}
             >
               <span className="text-base">{item.text}</span>
-              <span className="text-sm w-fit py-1 px-2 bg-[#D1DDFF]">
+              <span
+                className={`text-sm w-fit py-1 px-2 ${
+                  selectedItem === item.text
+                    ? "bg-[#D1DDFF] text-primary"
+                    : " bg-[#F8F8F8] text-[#444444]"
+                }`}
+              >
                 {item.totalNumber}
               </span>
             </div>
