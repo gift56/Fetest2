@@ -1,5 +1,6 @@
 import MainLayout from "../layout/MainLayout";
 import { BiChevronDown } from "react-icons/bi";
+import { LuCalendarDays } from "react-icons/lu";
 
 const OpportunityViewPage = () => {
   return (
@@ -14,7 +15,9 @@ const OpportunityViewPage = () => {
               <span>London Internship Program</span>
               <BiChevronDown className="w-4 h-4" />
             </span>
-            <span className="w-fit py-1 px-4 flex items-center justify-end gap-2"></span>
+            <span className="w-fit py-1 px-4 flex items-center justify-end gap-2 bg-[#F0F3FB] rounded-2xl">
+              <LuCalendarDays />
+            </span>
           </div>
         </div>
       </div>
