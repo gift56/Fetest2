@@ -207,4 +207,20 @@ export const moreInfoIcons = [
   { icon: HiOutlineEnvelope },
 ];
 
-export const possibleFilter=[]
+export const possibleFilter = [
+  {
+    title: "Personal Information",
+  },
+  {
+    title: "Education",
+  },
+  {
+    title: "Work Experience",
+  },
+  {
+    title: "Activity Filter",
+  },
+  {
+    title: "Advanced Filter",
+  },
+];
