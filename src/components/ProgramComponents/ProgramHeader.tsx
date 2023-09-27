@@ -80,7 +80,7 @@ const ProgramHeader = () => {
         </div>
       </div>
       <div className="flex items-center justify-end gap-6">
-        <span className="">
+        <span className="shadow-iconShad bg-white border-[]">
           <GoTag />
         </span>
       </div>
