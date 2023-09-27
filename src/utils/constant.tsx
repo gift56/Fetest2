@@ -265,4 +265,10 @@ export const opportunityData = [
     previousNo: "71",
     status: true,
   },
+  {
+    headline: "Hired",
+    total: "98",
+    previousNo: "167",
+    status: true,
+  },
 ];
