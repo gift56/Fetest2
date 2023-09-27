@@ -79,7 +79,7 @@ const ProgramViewPage = () => {
               </div>
               {possibleFilter.map((item, i) => (
                 <div
-                  className="p-4 flex items-center group justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300"
+                  className="p-4 flex items-center group justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300 cursor-pointer"
                   key={i}
                 >
                   <div className="flex items-center justify-start gap-2">
