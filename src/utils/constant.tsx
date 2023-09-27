@@ -251,3 +251,7 @@ export const possibleFilter = [
     title: "Advanced Filter",
   },
 ];
+
+export const opportunityData = [{
+  
+}];

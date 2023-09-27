@@ -22,6 +22,7 @@ const OpportunityViewPage = () => {
             </span>
           </div>
         </div>
+        
       </div>
     </MainLayout>
   );
