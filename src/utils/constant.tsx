@@ -66,7 +66,7 @@ export const candidateData = [
     coverImage: "AS",
   },
   {
-    id: "002020202030302002",
+    id: "003020202030302002",
     name: "John Doe",
     nationality: "Bostom, USA",
     education: "Bachelor - MIT (2023 - 2023)",
