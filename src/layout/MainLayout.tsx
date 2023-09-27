@@ -7,7 +7,8 @@ interface ChildrenProp {
 
 const MainLayout = ({ children, title }: ChildrenProp) => {
   document.title = `${title}`;
-  return <div>MainLayout</div>;
+
+  return <main>MainLayout</main>;
 };
 
 export default MainLayout;
