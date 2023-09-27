@@ -90,7 +90,9 @@ const ProgramViewPage = () => {
             <div className="w-full flex flex-col items-start justify-start bg-white rounded-lg overflow-hidden">
               <div className="p-4 flex items-center justify-between gap-4 w-full border-b">
                 <h2 className="text-sm font-medium text-dark">Filters</h2>
-                <p className="text-xs font-normal text-dark">0 Selected</p>
+                <p className="text-xs font-normal text-dark">
+                  {selectedItems.length} Selected
+                </p>
               </div>
               {possibleFilter.map((item, i) => (
                 <div
@@ -134,6 +136,7 @@ const ProgramViewPage = () => {
             </div>
             {searchedDatas.map((item) => (
               <div
+                onClick={() => handleItemClick(item)}
                 className="p-4 flex flex-col items-center w-full border-b last:border-none hover:bg-hovergray/20 transition-all duration-300 cursor-pointer"
                 key={item.id}
               >
