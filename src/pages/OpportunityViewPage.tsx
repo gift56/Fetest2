@@ -35,6 +35,9 @@ const OpportunityViewPage = () => {
                     {item.headline}
                   </h2>
                   <h1 className="text-base md:text-xl font-medium text-dark">{item.total}</h1>
+                  <div className="flex flex-col items-start w-full">
+                    <p className="text-sm font-normal text-dark">Previous Period</p>
+                  </div>
                 </div>
               ))}
             </div>
