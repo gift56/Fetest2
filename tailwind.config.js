@@ -11,6 +11,9 @@ module.exports = {
         inputgray: "#9AA6AC",
         usergray: "#D0E1FF",
       },
+      boxShadow: {
+        sideShad: "0px 4px 23px 0px rgba(0, 0, 0, 0.05)",
+      },
     },
   },
   plugins: [],
