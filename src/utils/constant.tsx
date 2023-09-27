@@ -74,4 +74,13 @@ export const candidateData = [
     experience: ["New York", "Marketing", "London"],
     coverImage: "AS",
   },
+  {
+    id: "003020202030302002",
+    name: "Kamilia Smith",
+    nationality: "London, UK",
+    education: "Bachelor - Boston University (2023 - 2023)",
+    tag: ["#top_candidate", "#top_candidate"],
+    experience: ["New York", "Marketing", "London"],
+    coverImage: "AS",
+  },
 ];
