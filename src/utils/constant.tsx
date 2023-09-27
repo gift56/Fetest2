@@ -176,6 +176,15 @@ export const candidateData = [
     experience: ["New York", "Marketing", "London"],
     coverImage: "AS",
   },
+  {
+    id: "0015020202030302002",
+    name: 'Alice Smith',
+    nationality: 'British',
+    education: 'Master\'s in Engineering',
+    tag: 'Engineer',
+    experience: '8 years',
+    coverImage: 'url-to-image-2.jpg'
+  },
 ];
 
 export const selectOptions = [
