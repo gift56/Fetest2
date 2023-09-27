@@ -85,8 +85,21 @@ const Sidebar = () => {
             Settings
           </span>
         </span>
-        <span className="w-10 h-10 bg-[#D7E5FD] rounded-full uppercase text-[#B1CDFD] text-base font-semibold flex items-center justify-center select-none cursor-pointer">
-          AS
+        <span
+          className={`flex items-center gap-4 py-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative ${
+            collapse ? "justify-start w-full px-2" : "justify-center w-fit px-3"
+          }`}
+        >
+          <span className="w-10 h-10 bg-[#D7E5FD] rounded-full uppercase text-[#B1CDFD] text-base font-semibold flex items-center justify-center select-none cursor-pointer">
+            EG
+          </span>
+          <span
+            className={`absolute ${
+              collapse ? "opacity-100 scale-100 relative" : "opacity-0 scale-0"
+            } transition-all duration-300`}
+          >
+            Efe Gift
+          </span>
         </span>
       </div>
     </div>
