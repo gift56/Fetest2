@@ -1,7 +1,7 @@
 import MainLayout from "../layout/MainLayout";
 import { BiChevronDown } from "react-icons/bi";
 import { LuCalendarDays } from "react-icons/lu";
-import { PiTrendUpLight } from "react-icons/pi";
+import { PiTrendUpLight, PiTrendDown } from "react-icons/pi";
 import { opportunityData } from "../utils/constant";
 
 const OpportunityViewPage = () => {
@@ -51,13 +51,16 @@ const OpportunityViewPage = () => {
                           item.status ? "bg-[#F0F6FF]" : "bg-[#FFF3F0]"
                         } flex items-center gap-1 text-xs font-normal text-dark py-1 px-2 rounded-2xl`}
                       >
-                        <PiTrendUpLight className={``} />
+                        {item.status ? <PiTrendUpLight /> : <PiTrendDown />}
                         <span>15</span>
                       </span>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="w-full">
+              
             </div>
           </div>
           <div className="w-full lg:flex-1 flex flex-col items-start justify-end gap-4"></div>
