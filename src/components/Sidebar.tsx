@@ -40,9 +40,20 @@ const Sidebar = () => {
             onClick={() => {
               setCollapse(!collapse);
             }}
-            className="w-fit flex items-center justify-center gap-4 py-3 px-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative"
+            className="w-fit flex items-center justify-center gap-4 py-2 px-2 rounded-lg hover:bg-hovergray transition-all duration-300 relative"
           >
-            <BiChevronLeft className="w-7 h-7" />
+            <BiChevronLeft
+              className={`w-7 h-7 ${
+                collapse ? "rotate-0" : "rotate-180"
+              } transition-all duration-300`}
+            />
+            <span
+              className={`absolute ${
+                collapse ? "opacity-100 scale-100" : "opacity-0 scale-0"
+              } transition-all duration-300`}
+            >
+              {collapse ? "Collapse" : "Expand"}
+            </span>
           </button>
         </nav>
       </ul>
