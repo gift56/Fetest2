@@ -72,6 +72,7 @@ const ProgramViewPage = () => {
             <div className="w-full flex flex-col items-start justify-start bg-white rounded-lg overflow-hidden">
               <div className="p-4 flex items-center justify-between gap-4 w-full border-b">
                 <h2 className="text-sm font-medium text-dark">Filters</h2>
+                <p className="text-sm font-normal text-dark">0 Selected</p>
               </div>
             </div>
           </div>
