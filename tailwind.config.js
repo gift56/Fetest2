@@ -5,7 +5,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#1D4ED8",
-        hashgray:"#D9D9D9"
+        hashgray: "#D9D9D9",
+        hovergray: "#E9EFFF",
+        dark: "#0B0B0B",
+        inputgray: "#9AA6AC",
+        usergray: "#D0E1FF",
       },
     },
   },
