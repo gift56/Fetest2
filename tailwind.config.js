@@ -14,6 +14,7 @@ module.exports = {
       boxShadow: {
         sideShad: "0px 4px 23px 0px rgba(0, 0, 0, 0.05)",
         selectShad: "0px 4px 25px 0px rgba(29, 78, 216, 0.05)",
+        iconShad: "0px 4px 25px 0px rgba(141, 141, 141, 0.05)",
       },
       screens: {
         laptop: "1390px",

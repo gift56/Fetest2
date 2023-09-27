@@ -28,8 +28,6 @@ const ProgramHeader = () => {
     };
   }, []);
 
-  const moreInfoIcons = [GoTag];
-
   return (
     <nav
       aria-label="programheading"
@@ -81,7 +79,11 @@ const ProgramHeader = () => {
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-end gap-6"></div>
+      <div className="flex items-center justify-end gap-6">
+        <span className="">
+          <GoTag />
+        </span>
+      </div>
     </nav>
   );
 };
