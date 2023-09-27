@@ -170,4 +170,28 @@ export const selectOptions = [
     text: "Technical Interview",
     totalNumber: "123",
   },
+  {
+    text: "Opportunity Browsing",
+    totalNumber: "223",
+  },
+  {
+    text: "Video Interview I",
+    totalNumber: "25",
+  },
+  {
+    text: "Video Interview II",
+    totalNumber: "25",
+  },
+  {
+    text: "Video Interview III",
+    totalNumber: "25",
+  },
+  {
+    text: "Offer",
+    totalNumber: "25",
+  },
+  {
+    text: "Withdrawn",
+    totalNumber: "25",
+  },
 ];
