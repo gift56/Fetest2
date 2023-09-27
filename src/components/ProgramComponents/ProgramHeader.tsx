@@ -1,8 +1,21 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ProgramHeader = () => {
   const [openSelect, setOpenSelect] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Opportunity Browsing");
+  const selctRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside:EventListener = (event) => {
+      if (selctRef.current && !selctRef.current.contains(event.target as Node)) {
+        setOpenSelect(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav
