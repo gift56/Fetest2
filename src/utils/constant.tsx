@@ -158,6 +158,24 @@ export const candidateData = [
     experience: ["New York", "Marketing", "London"],
     coverImage: "AS",
   },
+  {
+    id: "0013020202030302002",
+    name: "Jame Jade",
+    nationality: "Cambridge,  UK",
+    education: "Bachelor - Boston University (2023 - 2023)",
+    tag: ["#top_candidate", "#top_candidate"],
+    experience: ["New York", "Marketing", "London"],
+    coverImage: "AS",
+  },
+  {
+    id: "0014020202030302002",
+    name: "Mohammed Salman",
+    nationality: "New York, USA",
+    education: "Bachelor - Boston University (2023 - 2023)",
+    tag: ["#top_candidate", "#top_candidate"],
+    experience: ["New York", "Marketing", "London"],
+    coverImage: "AS",
+  },
 ];
 
 export const selectOptions = [
