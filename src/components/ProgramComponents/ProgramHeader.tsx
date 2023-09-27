@@ -49,8 +49,8 @@ const ProgramHeader = () => {
         <div
           ref={selectRef}
           className={`${
-            openSelect ? "scale-x-100 scale-y-50 opacity-100" : "scale-x-0 opacity-0"
-          } w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl top-12 shadow-selectShad z-10 transition-all duration-300`}
+            openSelect ? "scale-x-100 opacity-100 top-12" : "scale-x-0 opacity-0 top-0"
+          } w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl shadow-selectShad z-10 transition-all duration-300`}
         >
           {selectOptions.map((item) => (
             <div
