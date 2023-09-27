@@ -47,14 +47,16 @@ const ProgramHeader = () => {
           <BiChevronDown className="w-5 h-5" />
         </div>
         <div
+          ref={selectRef}
           className={`w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl top-12 shadow-selectShad z-10`}
         >
           {selectOptions.map((item) => (
             <div
-              ref={selectRef}
               onClick={() => openSelection(item.text)}
               key={item.text}
-              className={`${openSelect?"flex":"hidden"} w-full border-b items-center last:rounded-bl-2xl last:rounded-br-2xl last:border-none justify-between gap-4 shadow-selectShad hover:bg-hovergray hover:text-primary cursor-pointer transition-all text-dark py-4 px-4 ${
+              className={`${
+                openSelect ? "flex" : "hidden"
+              } w-full border-b items-center last:rounded-bl-2xl last:rounded-br-2xl last:border-none justify-between gap-4 shadow-selectShad hover:bg-hovergray hover:text-primary cursor-pointer transition-all text-dark py-4 px-4 ${
                 selectedItem === item.text
                   ? "bg-hovergray text-primary font-medium"
                   : " font-normal"
