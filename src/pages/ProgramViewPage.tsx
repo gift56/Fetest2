@@ -93,7 +93,9 @@ const ProgramViewPage = () => {
               ))}
             </div>
           </div>
-          <div className="w-full lg:flex-[2.5]"></div>
+          <div className="w-full lg:flex-[2.5] bg-white flex flex-col items-start justify-start bg-white rounded-lg overflow-hidden">
+
+          </div>
         </div>
       </div>
     </MainLayout>
