@@ -82,19 +82,19 @@ const ProgramHeader = () => {
         </div>
       </div>
       <div className="flex items-center justify-end gap-4">
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg">
+        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
           <GoTag className="w-5 h-5" />
         </span>
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#A80000] w-10 h-10 flex items-center justify-center rounded-lg">
+        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#A80000] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
           <FiUserX className="w-5 h-5" />
         </span>
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg">
+        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
           <FiUserCheck className="w-5 h-5" />
         </span>
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg">
+        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
           <BiUserVoice className="w-5 h-5" />
         </span>
-        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg">
+        <span className="shadow-iconShad bg-white border-[0.5px] border-[#ECECEC] text-[#444444] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer">
           <HiOutlineEnvelope className="w-5 h-5" />
         </span>
       </div>
