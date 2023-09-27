@@ -19,13 +19,13 @@ const Sidebar = () => {
             <NavLink
               to={item.to}
               key={i}
-              className="w-full flex items-center justify-center gap-4 py-3 px-6 rounded-lg hover:bg-hovergray transition-all duration-300 relative"
+              className="w-fit flex items-center justify-center gap-4 py-3 px-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative"
             >
               <span>
                 <item.icon className="w-6 h-6" />
               </span>
               <span
-                className={`absolute ${collapse ? "opacity-100 scale-100" : "opacity-0 scale-0"}`}
+                className={`absolute ${collapse ? "opacity-100 scale-100" : "opacity-0 scale-0"} transition-all duration-300`}
               >
                 {item.text}
               </span>
