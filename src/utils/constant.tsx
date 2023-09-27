@@ -1,6 +1,12 @@
 import { GrHomeRounded } from "react-icons/gr";
 import { RxShare1 } from "react-icons/rx";
-import { PiUsersThreeBold, PiCalendarCheckLight } from "react-icons/pi";
+import { BsHeart } from "react-icons/bs";
+import { FaRegFileAlt } from "react-icons/fa";
+import {
+  PiUsersThreeBold,
+  PiCalendarCheckLight,
+  PiNotebookLight,
+} from "react-icons/pi";
 
 export const sidebarLink = [
   {
@@ -25,7 +31,17 @@ export const sidebarLink = [
   },
   {
     text: "Opportunity",
-    icon: RxShare1,
+    icon: FaRegFileAlt,
     to: "/opportunity",
+  },
+  {
+    text: "Note",
+    icon: PiNotebookLight,
+    to: "/",
+  },
+  {
+    text: "Favorite",
+    icon: BsHeart,
+    to: "/",
   },
 ];
