@@ -21,9 +21,15 @@ const ProgramViewPage = () => {
   const [data, setData] = useState(candidateData);
   const [search, setSearch] = useState("");
 
-  const keys = ["name", "nationality", "education", "tag", "experience"];
+  const keys: (keyof Data)[] = [
+    "name",
+    "nationality",
+    "education",
+    "tag",
+    "experience",
+  ];
 
-  const searchTerm = (data: Data[], keys: (keyof Data)[], search: string) => {
+  const searchTerm = (data: Data[]) => {
     return data.filter((item) =>
       keys.some((key) => {
         const value = item[key];
@@ -145,7 +151,12 @@ const ProgramViewPage = () => {
                     </p>
                     <p className="text-xs font-medium text-[#037092] flex items-center justify-start gap-4">
                       {item.experience.map((item, i) => (
-                        <span key={i} className="bg-[#F3FAFC] py-2 px-4 rounded-xl">{item}</span>
+                        <span
+                          key={i}
+                          className="bg-[#F3FAFC] py-2 px-4 rounded-xl"
+                        >
+                          {item}
+                        </span>
                       ))}
                     </p>
                   </div>
