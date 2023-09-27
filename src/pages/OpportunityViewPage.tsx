@@ -1,6 +1,7 @@
 import MainLayout from "../layout/MainLayout";
 import { BiChevronDown } from "react-icons/bi";
 import { LuCalendarDays } from "react-icons/lu";
+import { PiTrendUpLight } from "react-icons/pi";
 import { opportunityData } from "../utils/constant";
 
 const OpportunityViewPage = () => {
@@ -35,8 +36,9 @@ const OpportunityViewPage = () => {
                     {item.headline}
                   </h2>
                   <h1 className="text-base md:text-xl font-medium text-dark">{item.total}</h1>
-                  <div className="flex flex-col items-start w-full">
+                  <div className="flex flex-col items-start w-full gap-2">
                     <p className="text-sm font-normal text-dark">Previous Period</p>
+                    <div className="flex items-center justify-start gap-2"></div>
                   </div>
                 </div>
               ))}
