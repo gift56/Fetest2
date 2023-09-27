@@ -83,7 +83,7 @@ const ProgramViewPage = () => {
                 >
                   <div className="flex items-center justify-start gap-2">
                     <FaRegFileAlt className="w-4 h-4" />
-                    <span>{item.title}</span>
+                    <span className="text-sm font-normal text-dark">{item.title}</span>
                   </div>
                 </div>
               ))}
