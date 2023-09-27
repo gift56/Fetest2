@@ -27,7 +27,7 @@ const ProgramViewPage = () => {
               >
                 <GoSearch className="w-5 h-5" />
               </button>
-              <input type="text" className="w-full h-full bg-red-500" />
+              <input type="text" className="w-full h-full text-sm font-normal text-inputgray outline-none border-none" placeholder="Serach by name, edu, exp or #tag" />
               <button
                 type="button"
                 className="pr-3 h-full flex items-center justify-center text-inputgray"
