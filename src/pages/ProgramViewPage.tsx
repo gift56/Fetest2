@@ -5,6 +5,7 @@ import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
 import { possibleFilter } from "../utils/constant";
 import { FaRegFileAlt } from "react-icons/fa";
+import { BiChevronDown } from "react-icons/bi";
 
 interface Data {
   id: string;
@@ -78,13 +79,16 @@ const ProgramViewPage = () => {
               </div>
               {possibleFilter.map((item, i) => (
                 <div
-                  className="p-4 flex items-center justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300"
+                  className="p-4 flex items-center group justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300"
                   key={i}
                 >
                   <div className="flex items-center justify-start gap-2">
                     <FaRegFileAlt className="w-4 h-4" />
-                    <span className="text-sm font-normal text-dark">{item.title}</span>
+                    <span className="text-sm font-normal text-dark">
+                      {item.title}
+                    </span>
                   </div>
+                  <BiChevronDown className="w-6 h-6 group-last:hidden" />
                 </div>
               ))}
             </div>
