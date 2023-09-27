@@ -4,11 +4,21 @@ import MainLayout from "../layout/MainLayout";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
 
+interface Data {
+  id: string;
+  name: string;
+  nationality: string;
+  education: string;
+  tag: string[];
+  experience: string[];
+  coverImage: string;
+}
+
 const ProgramViewPage = () => {
   const [search, setSearch] = useState("");
 
-  const keys = ["name", "nationality", "education", "tag"];
-  const searchTerm = (data: any) => {
+  const keys = ["name", "nationality", "education", "tag", "experience"];
+  const searchTerm = (data: Data[]) => {
     return data.filter((item: any) =>
       keys.some((key) => item[key].toLowerCase().includes(search))
     );
