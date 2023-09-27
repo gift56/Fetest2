@@ -3,7 +3,7 @@ import { ProgramHeader } from "../components";
 import MainLayout from "../layout/MainLayout";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
-import { possibleFilter } from "../utils/constant";
+import { candidateData, possibleFilter } from "../utils/constant";
 import { FaRegFileAlt } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
 
@@ -18,6 +18,7 @@ interface Data {
 }
 
 const ProgramViewPage = () => {
+  const [data, setData] = useState(candidateData);
   const [search, setSearch] = useState("");
 
   const keys = ["name", "nationality", "education", "tag", "experience"];
