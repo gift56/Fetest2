@@ -5,13 +5,18 @@ import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
 
 const ProgramViewPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [search, setSearch] = useState("");
+
+  const keys = ["name", "sector", "counts", "status"];
+  const searchTerm = (data: any) => {
+    return data.filter((item: any) =>
+      keys.some((key) => item[key].toLowerCase().includes(search))
+    );
+  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
-
-  console.log(searchTerm);
 
   return (
     <MainLayout title="FE OverView Task Test - Program Application View">
@@ -31,7 +36,7 @@ const ProgramViewPage = () => {
               </button>
               <input
                 type="text"
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => setSearch(e.target.value)}
                 className="w-full h-full text-sm font-normal text-inputgray outline-none border-none"
                 placeholder="Serach by name, edu, exp or #tag"
               />
