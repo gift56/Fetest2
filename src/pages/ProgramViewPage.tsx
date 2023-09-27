@@ -76,7 +76,9 @@ const ProgramViewPage = () => {
                 <p className="text-xs font-normal text-dark">0 Selected</p>
               </div>
               {possibleFilter.map((item, i) => (
-                <div className="p-4 flex items-center justify-between gap-4 w-full border-b last:border-none" key={i}></div>
+                <div className="p-4 flex items-center justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300" key={i}>
+                  <div className="item"></div>
+                </div>
               ))}
             </div>
           </div>
