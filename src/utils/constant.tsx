@@ -252,6 +252,17 @@ export const possibleFilter = [
   },
 ];
 
-export const opportunityData = [{
-  
-}];
+export const opportunityData = [
+  {
+    headline: "Applied",
+    total: "3,122",
+    previousNo: "1590",
+    status: true,
+  },
+  {
+    headline: "Offer",
+    total: "183",
+    previousNo: "71",
+    status: true,
+  },
+];
