@@ -1,6 +1,7 @@
 import MainLayout from "../layout/MainLayout";
 import { BiChevronDown } from "react-icons/bi";
 import { LuCalendarDays } from "react-icons/lu";
+import { opportunityData } from "../utils/constant";
 
 const OpportunityViewPage = () => {
   return (
@@ -23,9 +24,14 @@ const OpportunityViewPage = () => {
           </div>
         </div>
         <div className="w-full flex items-start justify-between flex-col lg:flex-row gap-6">
-          <div className="w-full lg:flex-1 flex flex-col items-start justify-start gap-4"></div>
+          <div className="w-full lg:flex-1 flex flex-col items-start justify-start gap-4">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-5">
+              {opportunityData.map((item, i) => (
+                <div key={i} className="w-full bg-white"></div>
+              ))}
+            </div>
+          </div>
           <div className="w-full lg:flex-1 flex flex-col items-start justify-end gap-4"></div>
-          
         </div>
       </div>
     </MainLayout>

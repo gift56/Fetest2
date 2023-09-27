@@ -15,6 +15,7 @@ module.exports = {
         sideShad: "0px 4px 23px 0px rgba(0, 0, 0, 0.05)",
         selectShad: "0px 4px 25px 0px rgba(29, 78, 216, 0.05)",
         iconShad: "0px 4px 25px 0px rgba(141, 141, 141, 0.05)",
+        cardShad: "2px 4px 40px 2px rgba(205, 223, 255, 0.15)",
       },
       screens: {
         laptop: "1390px",
