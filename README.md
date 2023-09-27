@@ -4,8 +4,6 @@
 - option 2
 - option 3
 
-### That's what this repository contains
-
 
 
 # Getting Started with Create React App
