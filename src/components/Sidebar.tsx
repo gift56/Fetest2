@@ -76,7 +76,7 @@ const Sidebar = () => {
             collapse ? "justify-start w-full px-2" : "justify-center w-fit px-3"
           }`}
         >
-          <IoSettingsOutline  className="w-8 h-8"/>
+          <IoSettingsOutline  className="w-6 h-6"/>
         </span>
       </div>
     </div>
