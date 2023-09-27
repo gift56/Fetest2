@@ -58,8 +58,6 @@ const ProgramViewPage = () => {
 
   const searchedDatas = searchTerm(data);
 
-  console.log(selectedItems);
-
   return (
     <MainLayout title="FE OverView Task Test - Program Application View">
       <div className="w-full h-screen flex flex-col items-start justify-start gap-6 py-8 px-6 overflow-y-auto overflow-x-hidden">

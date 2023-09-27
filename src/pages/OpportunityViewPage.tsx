@@ -1,5 +1,7 @@
+import MainLayout from "../layout/MainLayout";
+
 const OpportunityViewPage = () => {
-  return <div>OpportunityViewPage</div>;
+  return <MainLayout title="FE OverView Task Test - Opportunity Application View"></MainLayout>
 };
 
 export default OpportunityViewPage;
