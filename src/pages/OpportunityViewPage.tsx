@@ -23,6 +23,8 @@ const OpportunityViewPage = () => {
           </div>
         </div>
         <div className="w-full flex items-start justify-between flex-col lg:flex-row gap-6">
+          <div className="w-full lg:flex-1 flex flex-col items-start justify-start gap-4"></div>
+          <div className="w-full lg:flex-1 flex flex-col items-start justify-end gap-4"></div>
           
         </div>
       </div>
