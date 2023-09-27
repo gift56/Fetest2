@@ -101,11 +101,11 @@ const ProgramViewPage = () => {
                   247 Candidates
                 </p>
               </div>
-              <div className="flex items-center justify-end gap-2">
+              <div className="flex items-center justify-end gap-6">
                 <p className="text-sm font-medium text-primary">Qualified</p>
                 <p className="text-sm font-medium text-dark flex items-center gap-2">
                   <span>Task</span>
-                  <span className="w-fit py-2 px-3 text-[#22215B] text-xs font-normal bg-[#F7F8FD]">25</span>
+                  <span className="w-fit py-1 px-3 text-[#22215B] text-xs font-normal bg-[#F7F8FD] rounded-3xl">25</span>
                 </p>
               </div>
             </div>
