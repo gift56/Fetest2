@@ -78,6 +78,13 @@ const Sidebar = () => {
         >
           <IoSettingsOutline className="w-6 h-6" />
         </span>
+        <span
+          className={`absolute ${
+            collapse ? "opacity-100 scale-100 relative" : "opacity-0 scale-0"
+          } transition-all duration-300`}
+        >
+          Settings
+        </span>
       </div>
     </div>
   );
