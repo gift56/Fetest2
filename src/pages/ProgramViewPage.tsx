@@ -3,6 +3,7 @@ import { ProgramHeader } from "../components";
 import MainLayout from "../layout/MainLayout";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
+import { possibleFilter } from "../utils/constant";
 
 interface Data {
   id: string;
@@ -74,6 +75,9 @@ const ProgramViewPage = () => {
                 <h2 className="text-sm font-medium text-dark">Filters</h2>
                 <p className="text-xs font-normal text-dark">0 Selected</p>
               </div>
+              {possibleFilter.map((item, i) => (
+                <div className="p-4 flex items-center justify-between gap-4 w-full border-b last:border-none" key={i}></div>
+              ))}
             </div>
           </div>
           <div className="w-full lg:flex-[2.5]"></div>
