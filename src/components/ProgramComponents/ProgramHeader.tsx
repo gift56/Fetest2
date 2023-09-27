@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
+import { GoTag } from "react-icons/go";
 import { selectOptions } from "../../utils/constant";
 
 const ProgramHeader = () => {
@@ -26,6 +27,8 @@ const ProgramHeader = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const moreInfoIcons = [GoTag];
 
   return (
     <nav
