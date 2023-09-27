@@ -82,13 +82,14 @@ const ProgramHeader = () => {
         {moreInfoIcons.map((item, i) => (
           <span
             key={i}
-            className={`shadow-iconShad bg-white border-[0.5px] border-[#ECECEC w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer ${
+            className={`shadow-iconShad bg-white border-[0.5px] hover:bg-hovergray transition-all duration-300 border-[#ECECEC] w-10 h-10 flex items-center justify-center rounded-lg cursor-pointer ${
               item.danger === true ? "text-[#A80000]" : "text-[#444444]"
             }`}
           >
             <item.icon className="w-5 h-5" />
           </span>
         ))}
+        <div className="flex items-center justify-between"></div>
       </div>
     </nav>
   );
