@@ -50,6 +50,8 @@ const ProgramViewPage = () => {
     e.preventDefault();
   };
 
+  const searchedDatas = searchTerm(data);
+
   return (
     <MainLayout title="FE OverView Task Test - Program Application View">
       <div className="w-full h-screen flex flex-col items-start justify-start gap-6 py-8 px-6 overflow-y-auto overflow-x-hidden">
@@ -124,7 +126,7 @@ const ProgramViewPage = () => {
                 </p>
               </div>
             </div>
-            {data.map((item) => (
+            {searchedDatas.map((item) => (
               <div
                 className="p-4 flex flex-col items-center w-full border-b last:border-none hover:bg-hovergray/20 transition-all duration-300 cursor-pointer"
                 key={item.id}
