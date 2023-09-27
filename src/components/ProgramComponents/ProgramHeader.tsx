@@ -91,10 +91,12 @@ const ProgramHeader = () => {
         ))}
         <button
           type="button"
-          className="flex items-center justify-between bg-primary text-white text-sm font-normal outline-none h-10"
+          className="flex items-center relative justify-between bg-primary text-white text-sm font-normal outline-none h-10 rounded-lg"
         >
-          <span>Move To Video Interview I</span>
-          <span></span>
+          <span className="px-2 truncate">Move To Video Interview I</span>
+          <span className="h-full border-l border-white flex items-center justify-center px-2">
+            <BiChevronDown className="w-6 h-6" />
+          </span>
         </button>
       </div>
     </nav>
