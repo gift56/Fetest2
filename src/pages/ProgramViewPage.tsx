@@ -5,6 +5,7 @@ import { GoSearch } from "react-icons/go";
 
 const ProgramViewPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -19,8 +20,8 @@ const ProgramViewPage = () => {
               onSubmit={handleSubmit}
               className="w-full h-12 bg-white border border-[#F3F3F3] rounded-lg flex items-center justify-between gap-5"
             >
-              <button type="submit" className="">
-                <GoSearch />
+              <button type="submit" className="px-3 h-full flex items-center justify-center text-inputgray">
+                <GoSearch className="w-4 h-4" />
               </button>
             </form>
           </div>
