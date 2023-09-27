@@ -69,7 +69,9 @@ const ProgramViewPage = () => {
                 <PiWarningCircleLight className="w-5 h-5" />
               </button>
             </form>
-            <div className="w-full flex flex-col items-start justify-start bg-white"></div>
+            <div className="w-full flex flex-col items-start justify-start bg-white rounded-lg overflow-hidden">
+              <div className="py-4"></div>
+            </div>
           </div>
           <div className="w-full lg:flex-[2.5]"></div>
         </div>
