@@ -5,7 +5,7 @@ import { selectOptions } from "../../utils/constant";
 const ProgramHeader = () => {
   const [openSelect, setOpenSelect] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Opportunity Browsing");
-  const selctRef = useRef<HTMLDivElement>(null);
+  const selectRef = useRef<HTMLDivElement>(null);
 
   const openSelection = (item: string) => {
     setSelectedItem(item);
@@ -51,6 +51,7 @@ const ProgramHeader = () => {
         >
           {selectOptions.map((item) => (
             <div
+              ref={selectRef}
               onClick={() => openSelection(item.text)}
               key={item.text}
               className={`w-full border-b flex items-center last:rounded-bl-2xl last:rounded-br-2xl last:border-none justify-between gap-4 shadow-selectShad hover:bg-hovergray hover:text-primary cursor-pointer transition-all text-dark py-4 px-4 ${
