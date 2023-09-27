@@ -206,3 +206,5 @@ export const moreInfoIcons = [
   { icon: BiUserVoice },
   { icon: HiOutlineEnvelope },
 ];
+
+export const possibleFilter=[]
