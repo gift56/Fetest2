@@ -85,6 +85,9 @@ const Sidebar = () => {
             Settings
           </span>
         </span>
+        <span className="w-10 h-10 bg-[#D7E5FD] rounded-full uppercase text-[#B1CDFD] text-base font-semibold flex items-center justify-center select-none cursor-pointer">
+          NT
+        </span>
       </div>
     </div>
   );
