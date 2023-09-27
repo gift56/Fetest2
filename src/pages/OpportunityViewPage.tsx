@@ -31,7 +31,10 @@ const OpportunityViewPage = () => {
                   key={i}
                   className="w-full bg-white shadow-cardShad border border-[#F5F5F5] p-4 flex flex-col items-start justify-start gap-3 rounded-2xl"
                 >
-                  <h2 className="text-sm font-medium text-dark"></h2>
+                  <h2 className="text-sm font-medium text-dark">
+                    {item.headline}
+                  </h2>
+                  <h1 className="text-base md:text-xl font-medium text-dark">{item.total}</h1>
                 </div>
               ))}
             </div>
