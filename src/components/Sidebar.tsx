@@ -16,7 +16,16 @@ const Sidebar = () => {
           className="flex w-full flex-col items-center gap-6"
         >
           {sidebarLink.map((item, i) => (
-            <NavLink to={item.to} key={i} className="w-full flex items-center justify-center"></NavLink>
+            <NavLink
+              to={item.to}
+              key={i}
+              className="w-full flex items-center justify-center gap-4 py-3 px-6 rounded-lg hover:bg-hovergray transition-all duration-300"
+            >
+              <span>
+                <item.icon className="w-6 h-6" />
+              </span>
+              <span>{item.text}</span>
+            </NavLink>
           ))}
         </nav>
       </ul>
