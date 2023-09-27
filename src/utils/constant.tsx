@@ -45,3 +45,10 @@ export const sidebarLink = [
     to: "/",
   },
 ];
+
+export const candidateData = [
+  {
+    id:"001020202030302002",
+    name: "",
+  },
+];
