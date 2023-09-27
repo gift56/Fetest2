@@ -3,6 +3,7 @@ import { BiChevronDown } from "react-icons/bi";
 import { LuCalendarDays } from "react-icons/lu";
 import { PiTrendUpLight, PiTrendDown } from "react-icons/pi";
 import { opportunityData } from "../utils/constant";
+import { RecommendedChart } from "../components";
 
 const OpportunityViewPage = () => {
   return (
@@ -60,7 +61,7 @@ const OpportunityViewPage = () => {
               ))}
             </div>
             <div className="w-full">
-              
+              <RecommendedChart />
             </div>
           </div>
           <div className="w-full lg:flex-1 flex flex-col items-start justify-end gap-4"></div>
