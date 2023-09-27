@@ -65,7 +65,7 @@ const Sidebar = () => {
                   : "opacity-0 scale-0"
               } transition-all duration-300`}
             >
-              {collapse ? "Collapse" : "Expand"}
+              Collapse
             </span>
           </button>
         </nav>
