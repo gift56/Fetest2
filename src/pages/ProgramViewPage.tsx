@@ -124,7 +124,10 @@ const ProgramViewPage = () => {
                 key={item.id}
               >
                 <div className="flex items-center justify-start gap-10 w-full">
-                  
+                  <input type="checkbox" />
+                  <div className="select-none w-20 h-20 rounded-full flex items-center justify-center bg-[#EDF4FF] text-[#D0E1FF]">
+                    <span>{item.coverImage}</span>
+                  </div>
                 </div>
               </div>
             ))}
