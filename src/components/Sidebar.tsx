@@ -23,7 +23,7 @@ const Sidebar = () => {
             <NavLink
               to={item.to}
               key={i}
-              className={`flex items-center gap-4 py-3 rounded-lg hover:bg-hovergray transition-all duration-300 relative ${
+              className={`flex items-center gap-4 py-3 rounded-lg first:bg-hovergray first:text-primary hover:bg-hovergray transition-all duration-300 relative ${
                 collapse
                   ? "justify-start w-full px-2"
                   : "justify-center w-fit px-3"
@@ -70,6 +70,9 @@ const Sidebar = () => {
           </button>
         </nav>
       </ul>
+      <div className="w-full flex flex-col items-center justify-center gap-10">
+
+      </div>
     </div>
   );
 };
