@@ -19,6 +19,9 @@ module.exports = {
       screens: {
         laptop: "1390px",
       },
+      fontFamily: {
+        Inter: "'Inter', sans-serif",
+      },
     },
   },
   plugins: [],

@@ -15,8 +15,9 @@ const OpportunityViewPage = () => {
               <span>London Internship Program</span>
               <BiChevronDown className="w-4 h-4" />
             </span>
-            <span className="w-fit py-1 px-4 flex items-center justify-end gap-2 bg-[#F0F3FB] rounded-2xl">
-              <LuCalendarDays />
+            <span className="w-fit py-1 px-4 flex items-center text-sm font-normal justify-end gap-2 bg-[#F0F3FB] rounded-2xl">
+              <LuCalendarDays className="w-4 h-4" />
+              <span className="font-Inter"></span>
             </span>
           </div>
         </div>
