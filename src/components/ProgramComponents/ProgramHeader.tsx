@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 const ProgramHeader = () => {
+  const [openSelect, setOpenSelect] = useState(false);
+  const [selectedItem, setSelectedItem] = useState("Opportunity Browsing");
+
   return (
     <nav
       aria-label="programheading"
