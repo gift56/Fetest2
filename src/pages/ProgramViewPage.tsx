@@ -99,7 +99,7 @@ const ProgramViewPage = () => {
               <div className="flex items-center justify-start gap-2 select-none">
                 <input type="checkbox" />
                 <p className="text-sm font-semibold text-primary">
-                  247 Candidates
+                  {data.length} Candidates
                 </p>
               </div>
               <div className="flex items-center justify-end gap-6 select-none">
@@ -118,6 +118,12 @@ const ProgramViewPage = () => {
                 </p>
               </div>
             </div>
+            {data.map((item) => (
+              <div
+                className="p-4 flex items-center group justify-between gap-4 w-full border-b last:border-none hover:bg-hovergray transition-all duration-300 cursor-pointer"
+                key={item.id}
+              ></div>
+            ))}
           </div>
         </div>
       </div>
