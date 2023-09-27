@@ -45,7 +45,7 @@ export const data: any = {
       backgroundColor: "rgba(251, 227, 142, 0.70)",
       cubicInterpolationMode: "nearest",
       fontStyle: "italic",
-      borderWidth: 2,
+      borderWidth: 3,
     },
     {
       label: "Disqualified",
@@ -54,7 +54,7 @@ export const data: any = {
       backgroundColor: "rgba(154, 137, 255, 0.70)",
       cubicInterpolationMode: "nearest",
       fontStyle: "italic",
-      borderWidth: 2,
+      borderWidth: 3,
     },
   ],
 };
