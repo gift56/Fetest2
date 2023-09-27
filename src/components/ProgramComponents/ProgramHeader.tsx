@@ -47,7 +47,7 @@ const ProgramHeader = () => {
           <BiChevronDown className="w-5 h-5" />
         </div>
         <div
-          className={`w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl`}
+          className={`w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl top-12 shadow-selectShad z-10`}
         >
           {selectOptions.map((item) => (
             <div key={item.text} className="w-full border-b flex items-center last:rounded-bl-2xl last:rounded-br-2xl last:border-none justify-between gap-4 shadow-selectShad hover:bg-hovergray hover:text-primary cursor-pointer transition-all text-dark py-4 px-4">
