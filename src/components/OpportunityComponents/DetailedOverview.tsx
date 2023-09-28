@@ -45,12 +45,17 @@ const DetailedOverview = () => {
       </div>
     ),
     status: (
-      <div className="w-full flex flex-col items-start justify-start h-32">
+      <div className="w-full flex flex-col items-start justify-between h-32">
         {item.status.map((item, i) => (
-          <span key={i} className={`w-fit py-1 px-3`}>
-            {item}
-          </span>
+          <div key={i} className="w-full py-2">
+            <span className={`w-fit py-1 px-3 text-dark text-sm font-medium border ${item === "Active" ? "bg-[#F2FBE9] border-[#CBE3BF]" : "bg-[#FFECEA] border-[#FED8D4]"}`}>
+              {item}
+            </span>
+          </div>
         ))}
+        <div className="w-full py-2">
+          <span>Sub - Total</span>
+        </div>
       </div>
     ),
     applied: <div>hello</div>,
