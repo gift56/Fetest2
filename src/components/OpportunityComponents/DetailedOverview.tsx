@@ -3,10 +3,10 @@ import {
   PiSortDescendingBold,
   PiSortAscendingBold,
   PiWarningCircleLight,
-  PiChartPie,
 } from "react-icons/pi";
 import { GoSearch } from "react-icons/go";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
+import { LiaChartPieSolid } from "react-icons/lia";
 import { possibleSort } from "../../utils/constant";
 
 const DetailedOverview = () => {
@@ -108,11 +108,11 @@ const DetailedOverview = () => {
           <h2 className="text-sm font-medium text-dark">Google</h2>
           <div className="flex items-center justify-end gap-3">
             <span className="relative text-dark">
-              <PiChartPie className="w-6 h-6 rotate-90" />
+              <LiaChartPieSolid className="w-6 h-6 rotate-90" />
             </span>
-            <spa className="text-dark relative">
+            <span className="text-dark relative">
               <HiOutlineDocumentArrowDown className="w-6 h-6" />
-            </spa>
+            </span>
           </div>
         </div>
       </div>
