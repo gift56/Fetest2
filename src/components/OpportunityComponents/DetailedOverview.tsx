@@ -125,6 +125,7 @@ const DetailedOverview = () => {
             </span>
           </div>
         </div>
+        
       </div>
     </div>
   );

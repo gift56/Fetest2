@@ -322,6 +322,17 @@ export const possibleSort = [
 export const detailedOverviewData = [
   {
     name: "UX Internship",
-    status:"active"
+    status: "active",
+  },
+];
+
+export const detailedData = [
+  {
+    headline: "Applied",
+    total: "95",
+  },
+  {
+    headline: "Recommended",
+    total: "57",
   },
 ];
