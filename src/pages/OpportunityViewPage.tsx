@@ -91,7 +91,7 @@ const OpportunityViewPage = () => {
                   <h3 className="text-sm font-medium text-dark">Stage</h3>
                   <ul className="flex flex-col items-start justify-start gap-3">
                     {opportunityStage.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item} className="text-sm font-light text-dark">{item}</li>
                     ))}
                   </ul>
                 </div>
