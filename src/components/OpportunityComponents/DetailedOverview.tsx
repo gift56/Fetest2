@@ -101,7 +101,7 @@ const DetailedOverview = () => {
           </button>
         </div>
       </div>
-      <div className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto"></div>
+      <div className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto flex flex-col items-start justify-start gap-5"></div>
     </div>
   );
 };
