@@ -108,7 +108,7 @@ const DetailedOverview = () => {
           <h2 className="text-sm font-medium text-dark">Google</h2>
           <div className="flex items-center justify-end gap-3">
             <span className="relative text-dark">
-              <LiaChartPieSolid className="w-6 h-6 rotate-90" />
+              <LiaChartPieSolid className="w-6 h-6" />
             </span>
             <span className="text-dark relative">
               <HiOutlineDocumentArrowDown className="w-6 h-6" />
