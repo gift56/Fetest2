@@ -280,17 +280,20 @@ export const opportunityStage = [
   "Offer",
   "Hired",
 ];
-export const opportunityQualified = [
-  "3122",
-  "2164",
-  "443",
-  "183",
-  "118",
-];
-export const opportunityDisqulified = [
-  "1445",
-  "958",
-  "1721",
-  "260",
-  "65",
+export const opportunityQualified = ["3122", "2164", "443", "183", "118"];
+export const opportunityDisqulified = ["1445", "958", "1721", "260", "65"];
+
+export const opportunityRecommendData = [
+  {
+    headline: "Recommended",
+    total: "2,164",
+    previousNo: "90",
+    status: true,
+  },
+  {
+    headline: "Interview",
+    total: "443",
+    previousNo: "90",
+    status: true,
+  },
 ];

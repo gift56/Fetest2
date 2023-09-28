@@ -2,7 +2,13 @@ import MainLayout from "../layout/MainLayout";
 import { BiChevronDown } from "react-icons/bi";
 import { LuCalendarDays } from "react-icons/lu";
 import { PiTrendUpLight, PiTrendDown } from "react-icons/pi";
-import { opportunityData, opportunityDisqulified, opportunityQualified, opportunityStage } from "../utils/constant";
+import {
+  opportunityData,
+  opportunityDisqulified,
+  opportunityQualified,
+  opportunityRecommendData,
+  opportunityStage,
+} from "../utils/constant";
 import { RecommendedChart } from "../components";
 
 const OpportunityViewPage = () => {
@@ -108,9 +114,11 @@ const OpportunityViewPage = () => {
                       ))}
                     </ul>
                   </div>
-                
+
                   <div className="w-full flex flex-col items-end justify-end gap-3">
-                    <h3 className="text-sm font-medium text-dark">Disqualified</h3>
+                    <h3 className="text-sm font-medium text-dark">
+                      Disqualified
+                    </h3>
                     <ul className="flex flex-col items-end justify-end gap-3">
                       {opportunityDisqulified.map((item) => (
                         <li key={item} className="text-sm font-light text-dark">
@@ -119,9 +127,43 @@ const OpportunityViewPage = () => {
                       ))}
                     </ul>
                   </div>
-                
                 </div>
               </div>
+            </div>
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-5">
+              {opportunityRecommendData.map((item, i) => (
+                <div
+                  key={i}
+                  className="w-full bg-white shadow-cardShad border border-[#F5F5F5] p-4 flex flex-col items-start justify-start gap-3 rounded-2xl"
+                >
+                  <div className="flex items-start justify-between w-full">
+                    <h2 className="text-sm font-medium text-dark">
+                      {item.headline}
+                    </h2>
+                    <h1 className="text-base md:text-xl font-medium text-dark">
+                      {item.total}
+                    </h1>
+                  </div>
+                  <div className="flex flex-col items-start w-full gap-2">
+                    <p className="text-sm font-normal text-dark">
+                      Previous Period
+                    </p>
+                    <div className="flex items-center justify-start gap-2">
+                      <span className="text-xs font-normal text-dark">
+                        {item.previousNo}
+                      </span>
+                      <span
+                        className={`${
+                          item.status ? "bg-[#F0F6FF]" : "bg-[#FFF3F0]"
+                        } flex items-center gap-1 text-xs font-normal text-dark py-1 px-2 rounded-2xl`}
+                      >
+                        {item.status ? <PiTrendUpLight /> : <PiTrendDown />}
+                        <span>15</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
