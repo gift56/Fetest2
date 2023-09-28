@@ -125,7 +125,7 @@ const DetailedOverview = () => {
             </span>
           </div>
         </div>
-        
+        <div className=""></div>
       </div>
     </div>
   );
