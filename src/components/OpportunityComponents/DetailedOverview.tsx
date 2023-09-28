@@ -53,7 +53,7 @@ const DetailedOverview = () => {
             </span>
           </div>
         ))}
-        <div className="w-full py-3 bg-[#F6FAFF] px-2">
+        <div className="w-full py-3 bg-[#F6FAFF] px-2 text-dark text-sm font-medium ">
           <span>Sub - Total</span>
         </div>
       </div>
