@@ -297,3 +297,24 @@ export const opportunityRecommendData = [
     status: true,
   },
 ];
+
+export const possibleSort = [
+  {
+    title: "Applied",
+  },
+  {
+    title: "Recommended",
+  },
+  {
+    title: "Interview",
+  },
+  {
+    title: "Offer",
+  },
+  {
+    title: "Hired",
+  },
+  {
+    title: "Rejected",
+  },
+];
