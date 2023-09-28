@@ -9,7 +9,7 @@ import {
   opportunityRecommendData,
   opportunityStage,
 } from "../utils/constant";
-import { RecommendedChart } from "../components";
+import { DetailedOverview, RecommendedChart } from "../components";
 
 const OpportunityViewPage = () => {
   return (
@@ -168,7 +168,12 @@ const OpportunityViewPage = () => {
           </div>
         </div>
         <div className="w-full flex flex-col items-start justify-start gap-4">
-          <h2 className="text-base font-medium text-dark">Detailed Opportunity Overview</h2>
+          <h2 className="text-base font-medium text-dark">
+            Detailed Opportunity Overview
+          </h2>
+          <div className="w-full">
+            <DetailedOverview />
+          </div>
         </div>
       </div>
     </MainLayout>
