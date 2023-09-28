@@ -5,6 +5,7 @@ import {
   PiWarningCircleLight,
 } from "react-icons/pi";
 import { GoSearch } from "react-icons/go";
+import { possibleSort } from "../../utils/constant";
 
 const DetailedOverview = () => {
   const [openSort, setOpenSort] = useState(false);
@@ -21,7 +22,6 @@ const DetailedOverview = () => {
     const handleClickOutside: EventListener = (event) => {
       if (sortRef.current && !sortRef.current.contains(event.target as Node)) {
         setOpenSort(false);
-        setSortedItem("Sort by");
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -67,6 +67,28 @@ const DetailedOverview = () => {
               ) : (
                 <PiSortDescendingBold className="w-5 h-5" />
               )}
+            </div>
+            <div
+              ref={sortRef}
+              className={`${
+                openSort
+                  ? "scale-x-100 opacity-100 top-12"
+                  : "scale-x-0 opacity-0 top-0"
+              } w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl shadow-selectShad z-10 transition-all duration-300`}
+            >
+              {possibleSort.map((item) => (
+                <div
+                  onClick={() => openSelectionSort(item.text)}
+                  key={item.text}
+                  className={`w-full items-center last:rounded-bl-2xl flex last:rounded-br-2xl justify-between gap-4 hover:bg-hovergray hover:text-primary cursor-pointer transition-all duration-300 text-dark py-4 px-4 ${
+                    sortedItem === item.text
+                      ? "bg-hovergray text-primary font-medium"
+                      : " font-normal"
+                  }`}
+                >
+                  <span className="text-base">{item.text}</span>
+                </div>
+              ))}
             </div>
           </div>
           <button

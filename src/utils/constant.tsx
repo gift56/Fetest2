@@ -300,21 +300,21 @@ export const opportunityRecommendData = [
 
 export const possibleSort = [
   {
-    title: "Applied",
+    text: "Applied",
   },
   {
-    title: "Recommended",
+    text: "Recommended",
   },
   {
-    title: "Interview",
+    text: "Interview",
   },
   {
-    title: "Offer",
+    text: "Offer",
   },
   {
-    title: "Hired",
+    text: "Hired",
   },
   {
-    title: "Rejected",
+    text: "Rejected",
   },
 ];
