@@ -134,7 +134,7 @@ const OpportunityViewPage = () => {
               {opportunityRecommendData.map((item, i) => (
                 <div
                   key={i}
-                  className="w-full bg-white shadow-cardShad border border-[#F5F5F5] p-4 flex flex-col items-start justify-start gap-3 rounded-2xl"
+                  className="w-full bg-white shadow-cardShad border border-[#F5F5F5] p-6 flex flex-col items-start justify-start gap-3 rounded-2xl"
                 >
                   <div className="flex items-start justify-between w-full">
                     <h2 className="text-sm font-medium text-dark">
