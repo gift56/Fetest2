@@ -335,4 +335,24 @@ export const detailedData = [
     headline: "Recommended",
     total: "57",
   },
+  {
+    headline: "Interview",
+    total: "39",
+  },
+  {
+    headline: "Offer",
+    total: "33",
+  },
+  {
+    headline: "Hired",
+    total: "15",
+  },
+  {
+    headline: "Total Rejected",
+    total: "60",
+  },
+  {
+    headline: "Interview",
+    total: "39",
+  },
 ];
