@@ -25,6 +25,24 @@ const OpportunityTable = ({ columns, activities, className }: TableProp) => {
             ))}
         </tr>
       </thead>
+      <tbody className="w-full">
+        {activities &&
+          activities.map((row: any, i: any) => (
+            <tr
+              key={i}
+              className="h-fit w-full border-b border-[#EAECF0] last:border-none"
+            >
+              {columns?.map((col, i) => (
+                <td
+                  key={i}
+                  className="first:text-left text-darkColor px-2 xl:first:pl-0"
+                >
+                  {row[col.field]}
+                </td>
+              ))}
+            </tr>
+          ))}
+      </tbody>
     </table>
   );
 };
