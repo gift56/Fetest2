@@ -72,7 +72,12 @@ const DetailedOverview = () => {
           </div>
         ))}
         <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
-          <span>Sub - Total</span>
+          <span>
+            {item.applied.reduce((total, item) => {
+              const itemPrice = parseFloat(item.replace(",", ""));
+              return total + itemPrice;
+            }, 0)}
+          </span>
         </div>
       </div>
     ),
@@ -84,19 +89,29 @@ const DetailedOverview = () => {
           </div>
         ))}
         <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
-          <span>Sub - Total</span>
+          <span>
+            {item.recommended.reduce((total, item) => {
+              const itemPrice = parseFloat(item.replace(",", ""));
+              return total + itemPrice;
+            }, 0)}
+          </span>
         </div>
       </div>
     ),
     interview: (
       <div className="w-full flex flex-col items-start justify-between h-40">
-        {item.interview.map((item, i) => (
+        {item.interview.map((item: string, i: number) => (
           <div key={i} className="w-full py-3 pl-4">
             <span className="text-dark text-xs font-medium">{item}</span>
           </div>
         ))}
         <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
-          <span>Sub - Total</span>
+          <span>
+            {item.interview.reduce((total, item) => {
+              const itemPrice = parseFloat(item.replace(",", ""));
+              return total + itemPrice;
+            }, 0)}
+          </span>
         </div>
       </div>
     ),
@@ -108,7 +123,12 @@ const DetailedOverview = () => {
           </div>
         ))}
         <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
-          <span>Sub - Total</span>
+          <span>
+            {item.offer.reduce((total, item) => {
+              const itemPrice = parseFloat(item.replace(",", ""));
+              return total + itemPrice;
+            }, 0)}
+          </span>
         </div>
       </div>
     ),
@@ -120,7 +140,12 @@ const DetailedOverview = () => {
           </div>
         ))}
         <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
-          <span>Sub - Total</span>
+          <span>
+            {item.hired.reduce((total, item) => {
+              const itemPrice = parseFloat(item.replace(",", ""));
+              return total + itemPrice;
+            }, 0)}
+          </span>
         </div>
       </div>
     ),
