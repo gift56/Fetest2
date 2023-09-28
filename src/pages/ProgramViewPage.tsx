@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { ProgramHeader } from "../components";
 import MainLayout from "../layout/MainLayout";
 import { GoSearch } from "react-icons/go";
