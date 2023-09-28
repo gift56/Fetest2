@@ -101,7 +101,11 @@ const DetailedOverview = () => {
           </button>
         </div>
       </div>
-      <div className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto flex flex-col items-start justify-start gap-5"></div>
+      <div className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto flex flex-col items-start justify-start gap-5">
+        <div className="w-full flex items-center justify-between gap-3">
+          <h2 className="text-sm font-medium text-dark">Google</h2>
+        </div>
+      </div>
     </div>
   );
 };
