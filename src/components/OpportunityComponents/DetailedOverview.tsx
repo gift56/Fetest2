@@ -19,12 +19,18 @@ const DetailedOverview = () => {
   const [openSort, setOpenSort] = useState(false);
   const [sortedItem, setSortedItem] = useState("Sort by");
   const [search, setSearch] = useState("");
+  const [data, setData] = useState(detailedOverviewTableData)
   const sortRef = useRef<HTMLDivElement>(null);
 
   const openSelectionSort = (item: string) => {
     setSortedItem(item);
     setOpenSort(false);
   };
+
+  const filteredData = data.filter((item) => {
+    return item.name.toLowerCase().includes(search.toLowerCase());
+  });
+  const sortedData = [...filteredData];
 
   useEffect(() => {
     const handleClickOutside: EventListener = (event) => {
@@ -38,7 +44,7 @@ const DetailedOverview = () => {
     };
   }, []);
 
-  const tableActions = detailedOverviewTableData.map((item) => ({
+  const tableActions = sortedData.map((item) => ({
     name: (
       <div className="px-4 h-40 flex items-center justify-start w-full">
         <span className="text-sm font-normal text-dark">{item.name}</span>
