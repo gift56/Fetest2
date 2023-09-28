@@ -38,10 +38,10 @@ const DetailedOverview = () => {
     };
   }, []);
 
-  const tableActions = detailedOverviewTableData.map((item: any) => ({
+  const tableActions = detailedOverviewTableData.map((item) => ({
     name: (
       <div className="px-2 py-8 flex items-start justify-center w-full">
-        <span className="text-sm font-normal"></span>
+        <span className="text-sm font-normal text-dark">{item.name}</span>
       </div>
     ),
     status: <div>hello</div>,
