@@ -65,7 +65,10 @@ const OpportunityViewPage = () => {
             </div>
           </div>
           <div className="w-full lg:flex-1 flex flex-col items-start justify-end gap-4">
-            <div className="w-full bg-white shadow-cardShad border border-[#F5F5F5] p-4 flex flex-col items-start justify-start gap-3 rounded-2xl"></div>
+            <div className="w-full bg-white shadow-cardShad border border-[#F5F5F5] p-4 flex flex-col items-start justify-start gap-3 rounded-2xl">
+              <h2 className="text-sm font-medium text-dark">Total Candidate Flow</h2>
+              <h1 className="text-base font-medium md:text-xl text-dark">4,567</h1>
+            </div>
           </div>
         </div>
       </div>
