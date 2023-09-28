@@ -3,8 +3,10 @@ import {
   PiSortDescendingBold,
   PiSortAscendingBold,
   PiWarningCircleLight,
+  PiChartPie,
 } from "react-icons/pi";
 import { GoSearch } from "react-icons/go";
+import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { possibleSort } from "../../utils/constant";
 
 const DetailedOverview = () => {
@@ -104,6 +106,14 @@ const DetailedOverview = () => {
       <div className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto flex flex-col items-start justify-start gap-5">
         <div className="w-full flex items-center justify-between gap-3">
           <h2 className="text-sm font-medium text-dark">Google</h2>
+          <div className="flex items-center justify-end gap-3">
+            <span>
+              <PiChartPie className="w-5 h-5" />
+            </span>
+            <span>
+              <HiOutlineDocumentArrowDown className="w-5 h-5" />
+            </span>
+          </div>
         </div>
       </div>
     </div>
