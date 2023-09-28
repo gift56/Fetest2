@@ -7,7 +7,7 @@ import {
 import { GoSearch } from "react-icons/go";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { LiaChartPieSolid } from "react-icons/lia";
-import { possibleSort } from "../../utils/constant";
+import { detailedData, possibleSort } from "../../utils/constant";
 
 const DetailedOverview = () => {
   const [openSort, setOpenSort] = useState(false);
@@ -126,7 +126,9 @@ const DetailedOverview = () => {
           </div>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-5 xl:grid-cols-6">
-{}
+          {detailedData.map((item, i) => (
+            <div key={i} className="w-full bg-white flex flex-col shadow-cardShad rounded-2xl border border-[#F5F5F5] px-4 py-8"></div>
+          ))}
         </div>
       </div>
     </div>
