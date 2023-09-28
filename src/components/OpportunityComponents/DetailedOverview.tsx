@@ -133,6 +133,7 @@ const DetailedOverview = () => {
             </div>
           ))}
         </div>
+        
       </div>
     </div>
   );
