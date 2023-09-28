@@ -55,7 +55,9 @@ const DetailedOverview = () => {
           </div>
         </div>
         <div className="flex-1 flex items-center gap-4">
-          <div className="w-full flex flex-col items-center justify-start h-12 gap-3 bg-white shadow-selectShad rounded-lg relative"></div>
+          <div className="w-full flex flex-col items-center justify-start h-12 gap-3 bg-white shadow-selectShad rounded-lg relative border border-[#D8DFEB]">
+
+          </div>
           <button
             type="button"
             className="outline-none text-sm font-semibold text-primary w-full flex items-center justify-center h-12 gap-3 bg-white shadow-selectShad rounded-lg border border-[#D8DFEB]"
