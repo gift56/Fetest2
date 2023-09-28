@@ -350,6 +350,59 @@ export const detailedOverviewTableColumns = [
   },
 ];
 
+export const opportunityOverviewsData = [
+  {
+    id: "010203920228",
+    name: "Google",
+    details: [
+      {
+        headline: "Applied",
+        total: "95",
+      },
+      {
+        headline: "Recommended",
+        total: "57",
+      },
+      {
+        headline: "Interview",
+        total: "39",
+      },
+      {
+        headline: "Offer",
+        total: "33",
+      },
+      {
+        headline: "Hired",
+        total: "15",
+      },
+      {
+        headline: "Total Rejected",
+        total: "60",
+      },
+    ],
+    tableData = [
+      {
+        name: "UX Internship",
+        status: ["Active", "Disqualified"],
+        applied: ["20", "7"],
+        recommended: ["17", "4"],
+        interview: ["4", "1"],
+        offer: ["3", "1"],
+        hired: ["1", "1"],
+      },
+      {
+        name: "Art Internship",
+        status: ["Active", "Disqualified"],
+        applied: ["44", "24"],
+        recommended: ["32", "4"],
+        interview: ["21", "7"],
+        offer: ["19", "8"],
+        hired: ["10", "3"],
+      },
+    ],
+  },
+];
+
 export const detailedOverviewTableData = [
   {
     name: "UX Internship",
@@ -368,32 +421,5 @@ export const detailedOverviewTableData = [
     interview: ["21", "7"],
     offer: ["19", "8"],
     hired: ["10", "3"],
-  },
-];
-
-export const detailedData = [
-  {
-    headline: "Applied",
-    total: "95",
-  },
-  {
-    headline: "Recommended",
-    total: "57",
-  },
-  {
-    headline: "Interview",
-    total: "39",
-  },
-  {
-    headline: "Offer",
-    total: "33",
-  },
-  {
-    headline: "Hired",
-    total: "15",
-  },
-  {
-    headline: "Total Rejected",
-    total: "60",
   },
 ];

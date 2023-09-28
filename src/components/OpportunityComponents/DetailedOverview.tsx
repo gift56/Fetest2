@@ -263,21 +263,13 @@ const DetailedOverview = () => {
           ))}
         </div>
         <div className="bg-white rounded-lg shadow-cardShad w-full h-[90vh] overflow-y-auto overflow-x-hidden mt-4">
-          {detailedOverviewTableData.length === 0 ? (
-            <div className="w-full h-full flex items-center justify-center flex-col gap-5">
-              <h3 className="text-dark text-base font-medium">
-                No Overview Records Found
-              </h3>
-            </div>
-          ) : (
-            <div className="w-full">
-              <OpportunityTable
-                columns={detailedOverviewTableColumns}
-                className="first:!text-start px-4"
-                activities={tableActions}
-              />
-            </div>
-          )}
+          <div className="w-full">
+            <OpportunityTable
+              columns={detailedOverviewTableColumns}
+              className="first:!text-start px-4"
+              activities={tableActions}
+            />
+          </div>
         </div>
       </div>
     </div>
