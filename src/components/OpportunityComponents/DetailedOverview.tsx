@@ -62,7 +62,7 @@ const DetailedOverview = () => {
               className="w-full flex items-center justify-between cursor-pointer h-full px-4 text-dark"
             >
               <span className="text-base font-medium">{sortedItem}</span>
-              <span className="border-l">
+              <span className="border-l pl-3">
                 {openSort ? (
                   <PiSortAscendingBold className="w-5 h-5" />
                 ) : (
