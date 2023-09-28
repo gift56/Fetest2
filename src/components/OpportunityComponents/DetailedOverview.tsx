@@ -127,7 +127,7 @@ const DetailedOverview = () => {
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-5 xl:grid-cols-6">
           {detailedData.map((item, i) => (
-            <div key={i} className="w-full bg-white flex flex-col shadow-cardShad rounded-2xl border border-[#F5F5F5] px-4 py-8"></div>
+            <div key={i} className="w-full bg-white flex flex-col gap-5 items-center justify-center shadow-cardShad rounded-2xl border border-[#F5F5F5] px-4 py-8"></div>
           ))}
         </div>
       </div>
