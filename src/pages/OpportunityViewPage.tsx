@@ -72,7 +72,7 @@ const OpportunityViewPage = () => {
               <h1 className="text-base font-medium md:text-xl text-dark">
                 4,567
               </h1>
-              <div className="w-full flex items-center">
+              <div className="w-full flex items-center select-none">
                 <div className="w-[78%] flex flex-col items-start justify-start gap-2">
                   <div className="w-full h-2 bg-[#D0F2CA] rounded-tl-lg rounded-bl-lg"></div>
                   <span className="text-[#C2C2C2] font-light text-xs">
