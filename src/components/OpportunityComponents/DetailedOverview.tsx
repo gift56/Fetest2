@@ -56,7 +56,13 @@ const DetailedOverview = () => {
         </div>
         <div className="flex-1 flex items-center gap-4">
           <div className="w-full flex flex-col items-center justify-start h-12 gap-3 bg-white shadow-selectShad rounded-lg relative border border-[#D8DFEB]">
-
+            <div
+              onClick={() => setOpenSort(!openSort)}
+              className="w-full flex items-center justify-between cursor-pointer h-full px-4 text-dark"
+            >
+              <span className="text-base font-medium">{sortedItem}</span>
+              <PiSortAscendingBold className="w-5 h-5" />
+            </div>
           </div>
           <button
             type="button"
