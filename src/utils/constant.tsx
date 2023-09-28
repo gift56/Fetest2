@@ -355,6 +355,10 @@ export const detailedOverviewTableData = [
     name: "UX Internship",
     status: ["Active", "Disqualified"],
     applied: ["20", "7"],
+    recommended: ["17", "4"],
+    interview: ["4", "1"],
+    offer: ["3", "1"],
+    hired: ["1", "1"],
   },
 ];
 
