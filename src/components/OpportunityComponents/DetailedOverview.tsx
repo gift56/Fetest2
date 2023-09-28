@@ -157,20 +157,9 @@ const DetailedOverview = () => {
         <div className="bg-white rounded-lg shadow-cardShad w-full h-[90vh] overflow-y-auto overflow-x-hidden">
           {detailedOverviewTableData.length === 0 ? (
             <div className="w-full h-full flex items-center justify-center flex-col gap-5">
-              <div className="flex flex-col items-center justify-center gap-1">
-                <h3 className="text-dark text-base font-medium">
-                  No Data Found
-                </h3>
-                <p className="flex flex-col items-center justify-center text-center gap-1 text-sm text-gray1 font-normal">
-                  <span>
-                    Currently, there are no classrooms assigned to you.
-                  </span>
-                  <span>
-                    you’ll be as soon as your classroom assignment is{" "}
-                  </span>
-                  <span>finalized.</span>
-                </p>
-              </div>
+              <h3 className="text-dark text-base font-medium">
+                No Overview Records Found
+              </h3>
             </div>
           ) : (
             <div className="w-full">
