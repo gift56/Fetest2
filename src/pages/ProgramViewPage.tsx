@@ -52,10 +52,6 @@ const ProgramViewPage = () => {
     );
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
-
   const searchedDatas = searchTerm(data);
 
   return (
@@ -64,10 +60,7 @@ const ProgramViewPage = () => {
         <ProgramHeader />
         <div className="w-full flex flex-col lg:flex-row items-start justify-start gap-6">
           <div className="w-full lg:flex-[1] flex flex-col gap-6 items-start justify-start sticky top-6">
-            <form
-              onSubmit={handleSubmit}
-              className="w-full h-12 bg-white border border-[#F3F3F3] rounded-lg flex items-center justify-between"
-            >
+            <div className="w-full h-12 bg-white border border-[#F3F3F3] rounded-lg flex items-center justify-between">
               <button
                 type="submit"
                 className="px-3 h-full flex items-center justify-center text-inputgray"
@@ -86,7 +79,7 @@ const ProgramViewPage = () => {
               >
                 <PiWarningCircleLight className="w-5 h-5" />
               </button>
-            </form>
+            </div>
             <div className="w-full flex flex-col items-start justify-start bg-white rounded-lg overflow-hidden">
               <div className="p-4 flex items-center justify-between gap-4 w-full border-b">
                 <h2 className="text-sm font-medium text-dark">Filters</h2>
