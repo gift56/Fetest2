@@ -40,20 +40,20 @@ const DetailedOverview = () => {
 
   const tableActions = detailedOverviewTableData.map((item) => ({
     name: (
-      <div className="px-4 h-32 flex items-center justify-start w-full">
+      <div className="px-4 h-40 flex items-center justify-start w-full">
         <span className="text-sm font-normal text-dark">{item.name}</span>
       </div>
     ),
     status: (
-      <div className="w-full flex flex-col items-start justify-between h-32">
+      <div className="w-full flex flex-col items-start justify-between h-40 pl-2">
         {item.status.map((item, i) => (
-          <div key={i} className="w-full py-2">
-            <span className={`w-fit py-1 px-3 text-dark text-sm font-medium border rounded-full ${item === "Active" ? "bg-[#F2FBE9] border-[#CBE3BF]" : "bg-[#FFECEA] border-[#FED8D4]"}`}>
+          <div key={i} className="w-full py-3">
+            <span className={`w-fit py-1 px-4 text-dark text-sm font-medium border rounded-full ${item === "Active" ? "bg-[#F2FBE9] border-[#CBE3BF]" : "bg-[#FFECEA] border-[#FED8D4]"}`}>
               {item}
             </span>
           </div>
         ))}
-        <div className="w-full py-2">
+        <div className="w-full py-3 bg-[#F6FAFF] px-2">
           <span>Sub - Total</span>
         </div>
       </div>
