@@ -44,7 +44,7 @@ const DetailedOverview = () => {
               type="text"
               onChange={(e) => setSearch(e.target.value)}
               className="w-full h-full text-sm font-normal text-inputgray outline-none border-none"
-              placeholder="Serach by name, edu, exp or #tag"
+              placeholder="Search by employer name"
             />
             <button
               type="button"
