@@ -54,7 +54,10 @@ const DetailedOverview = () => {
             </button>
           </div>
         </div>
-        <div className="flex-1"></div>
+        <div className="flex-1">
+          <div className="w-full flex flex-col items-center justify-start h-12 gap-3 bg-white shadow-selectShad rounded-lg relative"></div>
+          <div className="w-full"></div>
+        </div>
       </div>
     </div>
   );
