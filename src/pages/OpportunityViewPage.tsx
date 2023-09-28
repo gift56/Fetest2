@@ -66,13 +66,25 @@ const OpportunityViewPage = () => {
           </div>
           <div className="w-full lg:flex-1 flex flex-col items-start justify-end gap-4">
             <div className="w-full bg-white shadow-cardShad border border-[#F5F5F5] p-4 flex flex-col items-start justify-start gap-3 rounded-2xl">
-              <h2 className="text-sm font-medium text-dark">Total Candidate Flow</h2>
-              <h1 className="text-base font-medium md:text-xl text-dark">4,567</h1>
-              <div className="w-full flex items-center justify-center">
-                <div className="w-[78%] flex flex-col items-start justify-start">
-                  <div className="w-full"></div>
+              <h2 className="text-sm font-medium text-dark">
+                Total Candidate Flow
+              </h2>
+              <h1 className="text-base font-medium md:text-xl text-dark">
+                4,567
+              </h1>
+              <div className="w-full flex items-center">
+                <div className="w-[78%] flex flex-col items-start justify-start gap-2">
+                  <div className="w-full h-2 bg-[#D0F2CA] rounded-tl-lg rounded-bl-lg"></div>
+                  <span className="text-[#C2C2C2] font-light text-xs">
+                    Qualified 78%
+                  </span>
                 </div>
-                <div></div>
+                <div className="w-[22%] flex flex-col items-start justify-start gap-2">
+                  <div className="w-full h-2 bg-[#FFE0E0] rounded-tr-lg rounded-br-lg"></div>
+                  <span className="text-[#C2C2C2] font-light text-xs">
+                    Disqualified 22%
+                  </span>
+                </div>
               </div>
             </div>
           </div>
