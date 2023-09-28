@@ -109,7 +109,7 @@ const DetailedOverview = () => {
           <div className="flex items-center justify-end gap-3">
             <span className="relative text-dark">
               <LiaChartPieSolid className="w-6 h-6" />
-              <span className="text-sm font-normal text-white shadow-tooltipShad bg-dark absolute -left-20 py-2 px-2 rounded w-[150px]">View Data Charts</span>
+              <span className="text-sm font-normal text-white shadow-tooltipShad bg-dark absolute top-10 text-center -left-20 py-2 px-2 rounded w-[150px]">View Data Charts</span>
             </span>
             <span className="text-dark relative">
               <HiOutlineDocumentArrowDown className="w-6 h-6" />
