@@ -353,7 +353,7 @@ export const detailedOverviewTableColumns = [
 export const detailedOverviewTableData = [
   {
     name: "UX Internship",
-    status: "active",
+    status: ["Active", "Disqualified", "Sub - Total"],
   },
 ];
 
