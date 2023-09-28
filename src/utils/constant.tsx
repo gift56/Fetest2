@@ -319,7 +319,38 @@ export const possibleSort = [
   },
 ];
 
-export const detailedOverviewData = [
+export const detailedOverviewTableColumns = [
+  {
+    field: "name",
+    header: "Opportunity Name",
+  },
+  {
+    field: "status",
+    header: "Status",
+  },
+  {
+    field: "applied",
+    header: "Applied",
+  },
+  {
+    field: "recommended",
+    header: "Recommended",
+  },
+  {
+    field: "interview",
+    header: "Interview",
+  },
+  {
+    field: "offer",
+    header: "Offer",
+  },
+  {
+    field: "hired",
+    header: "Hired",
+  },
+];
+
+export const detailedOverviewTableData = [
   {
     name: "UX Internship",
     status: "active",
