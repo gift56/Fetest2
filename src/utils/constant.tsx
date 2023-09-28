@@ -360,6 +360,15 @@ export const detailedOverviewTableData = [
     offer: ["3", "1"],
     hired: ["1", "1"],
   },
+  {
+    name: "Art Internship",
+    status: ["Active", "Disqualified"],
+    applied: ["44", "24"],
+    recommended: ["32", "4"],
+    interview: ["21", "7"],
+    offer: ["19", "8"],
+    hired: ["10", "3"],
+  },
 ];
 
 export const detailedData = [
