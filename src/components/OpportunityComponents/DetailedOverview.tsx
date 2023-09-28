@@ -61,7 +61,11 @@ const DetailedOverview = () => {
               className="w-full flex items-center justify-between cursor-pointer h-full px-4 text-dark"
             >
               <span className="text-base font-medium">{sortedItem}</span>
-              <PiSortAscendingBold className="w-5 h-5" />
+              {openSort ? (
+                <PiSortAscendingBold className="w-5 h-5" />
+              ) : (
+                <PiSortDescendingBold className="w-5 h-5" />
+              )}
             </div>
           </div>
           <button
