@@ -125,8 +125,8 @@ const DetailedOverview = () => {
             </span>
           </div>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-5 lg:grid-cols-6">
-            
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-5 xl:grid-cols-6">
+{}
         </div>
       </div>
     </div>
