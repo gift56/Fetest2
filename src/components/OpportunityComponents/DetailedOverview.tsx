@@ -19,7 +19,7 @@ const DetailedOverview = () => {
   const [openSort, setOpenSort] = useState(false);
   const [sortedItem, setSortedItem] = useState("Sort by");
   const [search, setSearch] = useState("");
-  const [data, setData] = useState(detailedOverviewTableData)
+  const [data] = useState(detailedOverviewTableData);
   const sortRef = useRef<HTMLDivElement>(null);
 
   const openSelectionSort = (item: string) => {
@@ -31,6 +31,13 @@ const DetailedOverview = () => {
     return item.name.toLowerCase().includes(search.toLowerCase());
   });
   const sortedData = [...filteredData];
+  if (sortedItem === "Applied") {
+    sortedData.sort((a, b) => parseInt(a.applied[0]) - parseInt(b.applied[0]));
+  } else if (sortedItem === "Recommended") {
+    sortedData.sort(
+      (a, b) => parseInt(a.recommended[0]) - parseInt(b.recommended[0])
+    );
+  }
 
   useEffect(() => {
     const handleClickOutside: EventListener = (event) => {
