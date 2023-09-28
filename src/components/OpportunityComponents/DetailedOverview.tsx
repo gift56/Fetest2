@@ -71,7 +71,7 @@ const DetailedOverview = () => {
             <span className="text-dark text-xs font-medium">{item}</span>
           </div>
         ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
+        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
           <span>
             {item.applied.reduce((total, item) => {
               const itemPrice = parseFloat(item.replace(",", ""));
@@ -88,7 +88,7 @@ const DetailedOverview = () => {
             <span className="text-dark text-xs font-medium">{item}</span>
           </div>
         ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
+        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
           <span>
             {item.recommended.reduce((total, item) => {
               const itemPrice = parseFloat(item.replace(",", ""));
@@ -105,7 +105,7 @@ const DetailedOverview = () => {
             <span className="text-dark text-xs font-medium">{item}</span>
           </div>
         ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
+        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
           <span>
             {item.interview.reduce((total, item) => {
               const itemPrice = parseFloat(item.replace(",", ""));
@@ -122,7 +122,7 @@ const DetailedOverview = () => {
             <span className="text-dark text-xs font-medium">{item}</span>
           </div>
         ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
+        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
           <span>
             {item.offer.reduce((total, item) => {
               const itemPrice = parseFloat(item.replace(",", ""));
@@ -139,7 +139,7 @@ const DetailedOverview = () => {
             <span className="text-dark text-xs font-medium">{item}</span>
           </div>
         ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-2 text-dark text-sm font-medium ">
+        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
           <span>
             {item.hired.reduce((total, item) => {
               const itemPrice = parseFloat(item.replace(",", ""));
