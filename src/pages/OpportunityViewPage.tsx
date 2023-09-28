@@ -167,6 +167,9 @@ const OpportunityViewPage = () => {
             </div>
           </div>
         </div>
+        <div className="w-full flex flex-col items-start justify-start gap-4">
+          <h2 className="text-base font-medium text-dark">Detailed Opportunity Overview</h2>
+        </div>
       </div>
     </MainLayout>
   );
