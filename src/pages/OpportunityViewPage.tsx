@@ -86,6 +86,13 @@ const OpportunityViewPage = () => {
                   </span>
                 </div>
               </div>
+              <div className="w-full flex flex-col items-start justify-start gap-4 md:flex-row md:justify-between">
+                <div className="w-full flex flex-col items-start justify-start gap-3">
+                  <h3 className="text-sm font-medium text-dark">Stage</h3>
+                  <ul className="flex flex-col items-start justify-start gap-3"></ul>
+                </div>
+                <div className="w-full flex flex-col items-start justify-end gap-3"></div>
+              </div>
             </div>
           </div>
         </div>

@@ -272,3 +272,25 @@ export const opportunityData = [
     status: false,
   },
 ];
+
+export const opportunityStage = [
+  "Applied",
+  "Recommended",
+  "Interview",
+  "Offer",
+  "Hired",
+];
+export const opportunityQualified = [
+  "3122",
+  "2164",
+  "443",
+  "183",
+  "118",
+];
+export const opportunityDisqulified = [
+  "1445",
+  "958",
+  "1721",
+  "260",
+  "65",
+];
