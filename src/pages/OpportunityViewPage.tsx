@@ -2,7 +2,7 @@ import MainLayout from "../layout/MainLayout";
 import { BiChevronDown } from "react-icons/bi";
 import { LuCalendarDays } from "react-icons/lu";
 import { PiTrendUpLight, PiTrendDown } from "react-icons/pi";
-import { opportunityData, opportunityStage } from "../utils/constant";
+import { opportunityData, opportunityDisqulified, opportunityQualified, opportunityStage } from "../utils/constant";
 import { RecommendedChart } from "../components";
 
 const OpportunityViewPage = () => {
@@ -91,11 +91,36 @@ const OpportunityViewPage = () => {
                   <h3 className="text-sm font-medium text-dark">Stage</h3>
                   <ul className="flex flex-col items-start justify-start gap-3">
                     {opportunityStage.map((item) => (
-                      <li key={item} className="text-sm font-light text-dark">{item}</li>
+                      <li key={item} className="text-sm font-light text-dark">
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </div>
-                <div className="w-full flex flex-col items-start justify-end gap-3"></div>
+                <div className="w-full flex flex-col md:flex-row items-start justify-end gap-3">
+                  <div className="w-full flex flex-col items-end justify-end gap-3">
+                    <h3 className="text-sm font-medium text-dark">Qualified</h3>
+                    <ul className="flex flex-col items-end justify-end gap-3">
+                      {opportunityQualified.map((item) => (
+                        <li key={item} className="text-sm font-light text-dark">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                
+                  <div className="w-full flex flex-col items-end justify-end gap-3">
+                    <h3 className="text-sm font-medium text-dark">Disqualified</h3>
+                    <ul className="flex flex-col items-end justify-end gap-3">
+                      {opportunityDisqulified.map((item) => (
+                        <li key={item} className="text-sm font-light text-dark">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                
+                </div>
               </div>
             </div>
           </div>
