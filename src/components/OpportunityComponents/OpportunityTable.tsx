@@ -35,7 +35,7 @@ const OpportunityTable = ({ columns, activities, className }: TableProp) => {
               {columns?.map((col, i) => (
                 <td
                   key={i}
-                  className="first:text-left text-darkColor px-2 xl:first:pl-0"
+                  className="first:text-left"
                 >
                   {row[col.field]}
                 </td>

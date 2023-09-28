@@ -39,7 +39,11 @@ const DetailedOverview = () => {
   }, []);
 
   const tableActions = detailedOverviewTableData.map((item: any) => ({
-    name: <div>hello</div>,
+    name: (
+      <div className="px-2 py-8 flex items-start justify-center w-full">
+        <span className="text-sm font-normal"></span>
+      </div>
+    ),
     status: <div>hello</div>,
     applied: <div>hello</div>,
     recommended: <div>hello</div>,
