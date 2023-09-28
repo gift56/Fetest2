@@ -154,7 +154,7 @@ const DetailedOverview = () => {
             </div>
           ))}
         </div>
-        <div className="bg-white rounded-lg shadow-cardShad w-full h-[90vh] overflow-y-auto overflow-x-hidden">
+        <div className="bg-white rounded-lg shadow-cardShad w-full h-[90vh] overflow-y-auto overflow-x-hidden mt-4">
           {detailedOverviewTableData.length === 0 ? (
             <div className="w-full h-full flex items-center justify-center flex-col gap-5">
               <h3 className="text-dark text-base font-medium">
