@@ -21,6 +21,7 @@ const DetailedOverview = () => {
     const handleClickOutside: EventListener = (event) => {
       if (sortRef.current && !sortRef.current.contains(event.target as Node)) {
         setOpenSort(false);
+        setSortedItem("Sort by");
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
