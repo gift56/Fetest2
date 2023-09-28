@@ -7,7 +7,11 @@ import {
 import { GoSearch } from "react-icons/go";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { LiaChartPieSolid } from "react-icons/lia";
-import { detailedData, possibleSort } from "../../utils/constant";
+import {
+  detailedData,
+  detailedOverviewTableData,
+  possibleSort,
+} from "../../utils/constant";
 
 const DetailedOverview = () => {
   const [openSort, setOpenSort] = useState(false);
@@ -31,6 +35,16 @@ const DetailedOverview = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const tableActions = detailedOverviewTableData.map((item: any) => ({
+    name: <div>hello</div>,
+    status: <div>hello</div>,
+    applied: <div>hello</div>,
+    recommended: <div>hello</div>,
+    interview: <div>hello</div>,
+    offer: <div>hello</div>,
+    hired: <div>hello</div>,
+  }));
 
   return (
     <div className="flex flex-col items-start justify-start w-full gap-6">
@@ -127,13 +141,17 @@ const DetailedOverview = () => {
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-5 xl:grid-cols-6">
           {detailedData.map((item, i) => (
-            <div key={i} className="w-full bg-white flex flex-col gap-3 items-center justify-center shadow-cardShad rounded-2xl border border-[#F5F5F5] p-4">
-                <h2 className="text-sm font-light text-dark text-center">{item.headline}</h2>
-                <p className="text-base font-medium text-dark">{item.total}</p>
+            <div
+              key={i}
+              className="w-full bg-white flex flex-col gap-3 items-center justify-center shadow-cardShad rounded-2xl border border-[#F5F5F5] p-4"
+            >
+              <h2 className="text-sm font-light text-dark text-center">
+                {item.headline}
+              </h2>
+              <p className="text-base font-medium text-dark">{item.total}</p>
             </div>
           ))}
         </div>
-        
       </div>
     </div>
   );
