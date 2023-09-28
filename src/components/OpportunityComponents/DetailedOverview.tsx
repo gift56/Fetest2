@@ -1,9 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { PiSortDescendingBold, PiSortAscendingBold } from "react-icons/pi";
+import {
+  PiSortDescendingBold,
+  PiSortAscendingBold,
+  PiWarningCircleLight,
+} from "react-icons/pi";
+import { GoSearch } from "react-icons/go";
 
 const DetailedOverview = () => {
   const [openSort, setOpenSort] = useState(false);
-  const [sortedItem, setSortedItem] = useState("Opportunity Browsing");
+  const [sortedItem, setSortedItem] = useState("Sort by");
+  const [search, setSearch] = useState("");
   const sortRef = useRef<HTMLDivElement>(null);
 
   const openSelectionSort = (item: string) => {
@@ -25,7 +31,10 @@ const DetailedOverview = () => {
 
   return (
     <div className="flex flex-col items-start justify-start w-full gap-6">
-      <div className="w-full flex items-center justify-between gap-6"></div>
+      <div className="w-full flex items-center justify-between gap-6">
+        <div className="flex-1"></div>
+        <div className="flex-1"></div>
+      </div>
     </div>
   );
 };
