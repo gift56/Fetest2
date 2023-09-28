@@ -351,8 +351,4 @@ export const detailedData = [
     headline: "Total Rejected",
     total: "60",
   },
-  {
-    headline: "Interview",
-    total: "39",
-  },
 ];
