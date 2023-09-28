@@ -9,9 +9,11 @@ import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { LiaChartPieSolid } from "react-icons/lia";
 import {
   detailedData,
+  detailedOverviewTableColumns,
   detailedOverviewTableData,
   possibleSort,
 } from "../../utils/constant";
+import OpportunityTable from "./OpportunityTable";
 
 const DetailedOverview = () => {
   const [openSort, setOpenSort] = useState(false);
@@ -151,6 +153,34 @@ const DetailedOverview = () => {
               <p className="text-base font-medium text-dark">{item.total}</p>
             </div>
           ))}
+        </div>
+        <div className="bg-white rounded-lg shadow-cardShad w-full h-[90vh] overflow-y-auto overflow-x-hidden">
+          {detailedOverviewTableData.length === 0 ? (
+            <div className="w-full h-full flex items-center justify-center flex-col gap-5">
+              <div className="flex flex-col items-center justify-center gap-1">
+                <h3 className="text-dark text-base font-medium">
+                  No Data Found
+                </h3>
+                <p className="flex flex-col items-center justify-center text-center gap-1 text-sm text-gray1 font-normal">
+                  <span>
+                    Currently, there are no classrooms assigned to you.
+                  </span>
+                  <span>
+                    you’ll be as soon as your classroom assignment is{" "}
+                  </span>
+                  <span>finalized.</span>
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="w-full">
+              <OpportunityTable
+                columns={detailedOverviewTableColumns}
+                className="first:!text-start px-4"
+                activities={tableActions}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
