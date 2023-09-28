@@ -2,7 +2,7 @@ import MainLayout from "../layout/MainLayout";
 import { BiChevronDown } from "react-icons/bi";
 import { LuCalendarDays } from "react-icons/lu";
 import { PiTrendUpLight, PiTrendDown } from "react-icons/pi";
-import { opportunityData } from "../utils/constant";
+import { opportunityData, opportunityStage } from "../utils/constant";
 import { RecommendedChart } from "../components";
 
 const OpportunityViewPage = () => {
@@ -89,7 +89,11 @@ const OpportunityViewPage = () => {
               <div className="w-full flex flex-col items-start justify-start gap-4 md:flex-row md:justify-between">
                 <div className="w-full flex flex-col items-start justify-start gap-3">
                   <h3 className="text-sm font-medium text-dark">Stage</h3>
-                  <ul className="flex flex-col items-start justify-start gap-3"></ul>
+                  <ul className="flex flex-col items-start justify-start gap-3">
+                    {opportunityStage.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
                 <div className="w-full flex flex-col items-start justify-end gap-3"></div>
               </div>

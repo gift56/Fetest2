@@ -18,7 +18,7 @@ interface Data {
 }
 
 const ProgramViewPage = () => {
-  const [data, setData] = useState(candidateData);
+  const [data] = useState(candidateData);
   const [search, setSearch] = useState("");
   const [selectedItems, setSelectedItems] = useState<Data[]>([]);
 
