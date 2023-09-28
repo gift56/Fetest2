@@ -107,11 +107,11 @@ const DetailedOverview = () => {
         <div className="w-full flex items-center justify-between gap-3">
           <h2 className="text-sm font-medium text-dark">Google</h2>
           <div className="flex items-center justify-end gap-3">
-            <span>
-              <PiChartPie className="w-5 h-5" />
+            <span className="relative">
+              <PiChartPie className="w-8 h-8 rotate-90" />
             </span>
             <span>
-              <HiOutlineDocumentArrowDown className="w-5 h-5" />
+              <HiOutlineDocumentArrowDown className="w-8 h-8" />
             </span>
           </div>
         </div>
