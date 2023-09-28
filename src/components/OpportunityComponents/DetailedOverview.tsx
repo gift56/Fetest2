@@ -106,10 +106,10 @@ const DetailedOverview = () => {
       <div className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto flex flex-col items-start justify-start gap-5">
         <div className="w-full flex items-center justify-between gap-3">
           <h2 className="text-sm font-medium text-dark">Google</h2>
-          <div className="flex items-center justify-end gap-3">
+          <div className="flex items-center justify-end gap-5">
             <span className="relative text-dark w-10 h-10 flex items-center justify-center shadow-cardShad border border-[#ECECEC] rounded-lg cursor-pointer group">
               <LiaChartPieSolid className="w-6 h-6" />
-              <span className="text-sm font-normal text-white shadow-tooltipShad bg-dark absolute top-12 text-center -left-20 py-2 px-2 rounded w-[150px] group-hover:scale-100 scale-0 transition-all duration-300">
+              <span className="text-sm font-normal text-white shadow-tooltipShad bg-dark absolute top-12 text-center -left-[180%] py-2 px-2 rounded w-[150px] group-hover:scale-100 scale-0 transition-all duration-300">
                 <span className="relative before:top-[-50%] before:rotate-45 before:left-[50%] before:w-5 before:h-5 before:content-[''] before:bg-dark before:absolute">
                   <span className="relative">View Data Charts</span>
                 </span>
