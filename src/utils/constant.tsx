@@ -318,3 +318,10 @@ export const possibleSort = [
     text: "Rejected",
   },
 ];
+
+export const detailedOverviewData = [
+  {
+    name: "UX Internship",
+    status:"active"
+  },
+];
