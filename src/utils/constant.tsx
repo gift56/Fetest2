@@ -489,7 +489,7 @@ export const sortSelction = [
     option: "Date",
   },
   {
-    selected: false,
+    selected: true,
     option: "Number",
   },
   {
