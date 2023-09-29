@@ -29,12 +29,19 @@ const ProfileTab = () => {
   return (
     <div
       id="profile"
-      className="w-full bg-white rounded-2xl p-5 flex flex-col items-start justify-start"
+      className="w-full bg-white rounded-2xl p-5 flex flex-col gap-6 items-start justify-start"
     >
       <h2 className="text-sm font-semibold text-dark">Personal Information</h2>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start justify-start">
         {profileData.map((item, i) => (
-          <div key={i} className="w-full flex items-center justify-start gap-5"></div>
+          <div key={i} className="w-full flex items-center justify-start gap-5">
+            <span className="text-dark">
+              <item.icon size={20} />
+            </span>
+            <div className="flex flex-col items-start justify-start gap-2">
+              <h4 className="text-[#5F5F5F] text-sm font-normal">{item.headline}</h4>
+            </div>
+          </div>
         ))}
       </div>
     </div>
