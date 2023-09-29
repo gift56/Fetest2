@@ -5,6 +5,7 @@ import { BiChevronDown } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
 import { ApplicationUserProfileDetail } from "../components";
+import { BsChevronRight } from "react-icons/bs";
 
 interface Data {
   id: string;
@@ -239,7 +240,10 @@ const ApplicationViewPage = () => {
         </div>
         <div className="w-full lg:flex-[2] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden">
           <ApplicationUserProfileDetail />
-          <div></div>
+          <div
+            ref={tabSliderRef}
+            className="w-full h-full overflow-x-scroll overflow-y-hidden whitespace-nowrap scroll-smooth scrollbar-hide relative"
+          ></div>
         </div>
       </div>
     </MainLayout>
