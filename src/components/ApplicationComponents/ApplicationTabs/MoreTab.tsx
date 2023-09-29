@@ -31,7 +31,10 @@ const MoreTab = () => {
       </h2>
       <div className="w-full flex flex-col items-start justify-start gap-6">
         {otherProgramData.map((item, index) => (
-          <div className="w-full border-b py-5 flex items-center justify-between gap-5">
+          <div
+            key={index}
+            className="w-full border-b py-5 flex items-center justify-between gap-5"
+          >
             <div className="w-full  flex items-center justify-start gap-5">
               <span className="text-dark w-10 h-10 border border-[#ECECEC] flex items-center justify-center rounded-lg">
                 <img src="/paletteIcon.png" alt="icon" />
@@ -43,6 +46,15 @@ const MoreTab = () => {
                 </h2>
               </div>
             </div>
+            <span
+              className={`${
+                item.status === "Active"
+                  ? "bg-[#DBF5D3] text-[#087B2F] border-[#9DDC89]"
+                  : "bg-[#FFECEA] text-[#FC402B] border-[#FEA095]"
+              } text-xs font-normal`}
+            >
+              {item.status}
+            </span>
           </div>
         ))}
       </div>
