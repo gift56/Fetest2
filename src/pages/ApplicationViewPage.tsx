@@ -160,6 +160,33 @@ const ApplicationViewPage = () => {
               />
             </div>
           </div>
+          <div className="w-full flex flex-col items-start justify-start rounded-lg overflow-y-auto overflow-x-hidden">
+            <div className="p-4 flex items-center justify-between gap-4 w-full bg-white">
+              <div className="border-r-2 pr-2">
+                <input type="checkbox" />
+              </div>
+              <div className="flex items-center justify-end gap-6 select-none">
+                <p className="text-sm font-medium text-primary flex items-center justify-start gap-1 border-r-2 pr-2">
+                  <span>Qualified</span>
+                  <span className="w-fit bg-[#EDF4FF] py-1 px-2 rounded-full">
+                    247
+                  </span>
+                </p>
+                <p className="text-sm font-medium text-dark flex items-center gap-2 border-r-2 pr-2">
+                  <span>Task</span>
+                  <span className="w-fit py-1 px-3 text-[#22215B] text-xs font-normal bg-[#F7F8FD] rounded-3xl">
+                    25
+                  </span>
+                </p>
+                <p className="text-sm font-medium text-dark flex items-center gap-2">
+                  <span>Disqualified</span>
+                  <span className="w-fit py-1 px-3 text-[#22215B] text-xs font-normal bg-[#F7F8FD] rounded-3xl">
+                    78
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="w-full lg:flex-[2.5] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden"></div>
       </div>
