@@ -160,7 +160,7 @@ const ApplicationViewPage = () => {
               />
             </div>
           </div>
-          <div className="w-full flex flex-col items-start justify-start rounded-lg overflow-y-auto overflow-x-hidden">
+          <div className="w-full flex flex-col items-start gap-4 justify-start rounded-lg overflow-y-auto overflow-x-hidden">
             <div className="p-4 flex items-center justify-between gap-4 w-full bg-white">
               <div className="border-r-2 pr-2">
                 <input type="checkbox" />
