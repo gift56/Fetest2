@@ -9,6 +9,15 @@ const Sidebar = () => {
 
   const location = useLocation();
 
+  console.log(location);
+
+  const activePath = (pathname: string) => {
+    const currentPath = location.pathname;
+    return (
+      currentPath === pathname || currentPath.startsWith(pathname + "/detail")
+    );
+  };
+
   return (
     <div
       className={`${
@@ -30,9 +39,7 @@ const Sidebar = () => {
                   ? "justify-start w-full px-2"
                   : "justify-center w-fit px-3"
               } ${
-                location.pathname === item.to
-                  ? "bg-hovergray text-primary"
-                  : ""
+                location.pathname === item.to ? "bg-hovergray text-primary" : ""
               }`}
             >
               <span>

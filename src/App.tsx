@@ -10,7 +10,7 @@ const App = () => {
       <Route path="/" element={<ProgramViewPage />} />
       <Route path="/application" element={<ApplicationViewPage />} />
       <Route path="/opportunity" element={<OpportunityViewPage />} />
-      <Route path="/opportunity/:id" element={<OpportunityDetailsPage />} />
+      <Route path="/opportunity/detail/:id" element={<OpportunityDetailsPage />} />
     </Routes>
   );
 };

@@ -239,7 +239,7 @@ const DetailedOverview = () => {
               <h2 className="text-sm font-medium text-dark">{item.name}</h2>
               <div className="flex items-center justify-end gap-5">
                 <Link
-                  to={`/opportunity/${item.id}`}
+                  to={`/opportunity/detail/${item.id}`}
                   className="relative text-dark w-10 h-10 flex items-center justify-center shadow-cardShad border border-[#ECECEC] rounded-lg cursor-pointer group"
                 >
                   <LiaChartPieSolid className="w-6 h-6" />

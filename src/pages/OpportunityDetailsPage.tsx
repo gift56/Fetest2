@@ -12,7 +12,9 @@ import {
 import { DetailedOverview, RecommendedChart } from "../components";
 
 const OpportunityDetailsPage = () => {
-  return <div>OpportunityDetailsPage</div>;
+  return <MainLayout title="FE OverView Task Test - Opportunity Detail">
+
+  </MainLayout>
 };
 
 export default OpportunityDetailsPage;
