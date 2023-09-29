@@ -7,6 +7,7 @@ import { PiWarningCircleLight } from "react-icons/pi";
 import {
   ApplicationUserProfileDetail,
   EductaionTab,
+  PlacementTab,
   ProfileTab,
 } from "../components";
 import { BsChevronRight } from "react-icons/bs";
@@ -274,6 +275,7 @@ const ApplicationViewPage = () => {
           <div className="w-full flex flex-col items-start justify-start gap-5">
             <ProfileTab />
             <EductaionTab />
+            <PlacementTab />
           </div>
         </div>
       </div>
