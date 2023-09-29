@@ -6,15 +6,6 @@ type SortItem = {
   option: string;
 };
 
-type AdditionalQuestion = {
-  cat: string;
-  healine: string;
-  content: string;
-  reply?: string;
-  img?: string;
-  choices?: string[];
-};
-
 const VideoTab = () => {
   const [openSortQuestion, setOpenSortQuestion] = useState(false);
   const [sortData, setSortData] = useState<SortItem[]>(sortSelction);
