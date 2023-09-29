@@ -4,7 +4,7 @@ import { candidateData, selectOptions, tabLinks } from "../utils/constant";
 import { BiChevronDown } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
-import { ApplicationUserProfileDetail } from "../components";
+import { ApplicationUserProfileDetail, ProfileTab } from "../components";
 import { BsChevronRight } from "react-icons/bs";
 
 interface Data {
@@ -266,7 +266,7 @@ const ApplicationViewPage = () => {
             </span>
           </div>
           <div className="w-full">
-            
+            <div></div>
           </div>
         </div>
       </div>

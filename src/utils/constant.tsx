@@ -454,11 +454,12 @@ export const opportunityOverviewsData = [
 ];
 
 export const tabLinks = [
-  "Profile",
-  "Video",
-  "Evaluation",
-  "Placement",
-  "Compliance",
-  "Notes",
-  "More",
+  { id: "", text: "Profile" },
+  { id: "", text: "Video" },
+  { id: "", text: "Evaluation" },
+  { id: "", text: "Placement" },
+  { id: "", text: "Compliance" },
+  { id: "", text: "Notes" },
+  { id: "", text: "Notes" },
+  { id: "", text: "More" },
 ];
