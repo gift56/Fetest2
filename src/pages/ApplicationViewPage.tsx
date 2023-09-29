@@ -54,7 +54,8 @@ const ApplicationViewPage = () => {
   return (
     <MainLayout title="FE Task Test - Application Overview">
       <div className="w-full h-screen flex flex-col lg:flex-row items-start justify-start gap-6 py-8 px-6 overflow-y-auto overflow-x-hidden">
-
+        <div className="w-full lg:flex-[1] flex flex-col gap-6 items-start justify-start lg:sticky lg:top-6"></div>
+        <div className=""></div>
       </div>
     </MainLayout>
   );
