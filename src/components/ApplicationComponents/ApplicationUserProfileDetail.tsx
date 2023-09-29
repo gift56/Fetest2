@@ -25,7 +25,7 @@ const ApplicationUserProfileDetail = () => {
               </span>
             </h2>
             <p className="flex items-center justify-start text-xs font-light text-black">
-              <span>Saudi Arabia</span>
+              <span className="border-r-[2px] border-black pr-2">Saudi Arabia</span>
             </p>
           </div>
         </div>
