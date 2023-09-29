@@ -1,5 +1,11 @@
+import MainLayout from "../layout/MainLayout";
+
 const ApplicationViewPage = () => {
-  return <div>ApplicationViewPage</div>;
+  return (
+    <MainLayout title="FE Task Test - Application Overview">
+      ApplicationViewPage
+    </MainLayout>
+  );
 };
 
 export default ApplicationViewPage;
