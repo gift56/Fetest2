@@ -1,10 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
-import {
-  candidateData,
-  possibleFilter,
-  selectOptions,
-} from "../utils/constant";
+import { candidateData, selectOptions } from "../utils/constant";
 import { BiChevronDown } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
@@ -22,6 +18,7 @@ interface Data {
 
 const ApplicationViewPage = () => {
   const [data] = useState(candidateData);
+  const [tab, setTab] = useState("Profile");
   const [search, setSearch] = useState("");
   const [openSelect, setOpenSelect] = useState(false);
   const [selectedItem, setSelectedItem] = useState({
@@ -232,6 +229,7 @@ const ApplicationViewPage = () => {
         </div>
         <div className="w-full lg:flex-[2] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden">
           <ApplicationUserProfileDetail />
+          <div></div>
         </div>
       </div>
     </MainLayout>

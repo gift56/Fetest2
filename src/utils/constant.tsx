@@ -452,3 +452,12 @@ export const opportunityOverviewsData = [
     ],
   },
 ];
+
+export const tabLinks = [
+  "Profile",
+  "Video",
+  "Evaluation",
+  "Placement",
+  "Compliance",
+  "Notes",
+];
