@@ -1,11 +1,43 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiEye } from "react-icons/fi";
 import { LiaFileDownloadSolid } from "react-icons/lia";
 import { sortSelction } from "../../../utils/constant";
 
+type SortItem = {
+  selected: boolean;
+  option: string;
+};
+
 const ComplianceTab = () => {
   const [openSort, setOpenSort] = useState(false);
-  const [sortData, setSortData] = useState(sortSelction);
+  const [sortData, setSortData] = useState<SortItem[]>(sortSelction);
+  const selectRef = useRef<HTMLDivElement>(null);
+
+  const updateSelected = (optionToUpdate: string) => {
+    const updatedSortData = sortData.map((item) => {
+      if (item.option === optionToUpdate) {
+        return { ...item, selected: !item.selected };
+      }
+      return item;
+    });
+
+    setSortData(updatedSortData);
+  };
+
+  useEffect(() => {
+    const handleClickOutside: EventListener = (event) => {
+      if (
+        selectRef.current &&
+        !selectRef.current.contains(event.target as Node)
+      ) {
+        setOpenSort(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div
