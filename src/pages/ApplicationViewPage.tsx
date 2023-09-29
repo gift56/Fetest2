@@ -1,6 +1,8 @@
+import { useState } from "react";
 import MainLayout from "../layout/MainLayout";
 import { candidateData } from "../utils/constant";
 import { BiChevronDown } from "react-icons/bi";
+import { GoSearch } from "react-icons/go";
 
 interface Data {
   id: string;
