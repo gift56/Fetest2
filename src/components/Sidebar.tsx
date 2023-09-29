@@ -9,8 +9,6 @@ const Sidebar = () => {
 
   const location = useLocation();
 
-  console.log(location);
-
   const activePath = (pathname: string) => {
     const currentPath = location.pathname;
     return (
