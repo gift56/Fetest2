@@ -267,7 +267,7 @@ const ApplicationViewPage = () => {
             </span>
           </div>
           <div className="w-full">
-            <div></div>
+            <div id="profile"></div>
           </div>
         </div>
       </div>
