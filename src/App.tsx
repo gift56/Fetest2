@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import ProgramViewPage from "./pages/ProgramViewPage";
 import ApplicationViewPage from "./pages/ApplicationViewPage";
 import OpportunityViewPage from "./pages/OpportunityViewPage";
+import OpportunityDetailsPage from "./pages/OpportunityDetailsPage";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Route path="/" element={<ProgramViewPage />} />
       <Route path="/application" element={<ApplicationViewPage />} />
       <Route path="/opportunity" element={<OpportunityViewPage />} />
+      <Route path="/opportunity/:id" element={<OpportunityDetailsPage />} />
     </Routes>
   );
 };
