@@ -6,6 +6,7 @@ import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
 import {
   ApplicationUserProfileDetail,
+  ComplianceTab,
   EductaionTab,
   PlacementTab,
   ProfileTab,
@@ -276,6 +277,7 @@ const ApplicationViewPage = () => {
             <ProfileTab />
             <EductaionTab />
             <PlacementTab />
+            <ComplianceTab />
           </div>
         </div>
       </div>
