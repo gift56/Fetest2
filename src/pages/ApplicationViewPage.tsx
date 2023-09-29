@@ -107,7 +107,7 @@ const ApplicationViewPage = () => {
             >
               {selectOptions.map((item) => (
                 <div
-                  onClick={() => openSelection(item.text)}
+                  onClick={() => openSelection(item)}
                   key={item.text}
                   className={`w-full border-b items-center last:rounded-bl-2xl flex last:rounded-br-2xl last:border-none justify-between gap-4 shadow-selectShad hover:bg-hovergray hover:text-primary cursor-pointer transition-all duration-300 text-dark py-4 px-4 ${
                     selectedItem.text === item.text
