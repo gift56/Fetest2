@@ -6,6 +6,15 @@ type SortItem = {
   option: string;
 };
 
+type AdditionalQuestion = {
+  cat: string;
+  healine: string;
+  content: string;
+  reply?: string;
+  img?: string;
+  choices?: string[];
+};
+
 const VideoTab = () => {
   const [openSortQuestion, setOpenSortQuestion] = useState(false);
   const [sortData, setSortData] = useState<SortItem[]>(sortSelction);
@@ -46,12 +55,27 @@ const VideoTab = () => {
       return "bg-[#FFF6F7] text-[#E48A8F]";
     } else if (status === "Multiple Choice") {
       return "bg-[#F8FAFF] text-[#8DB97F]";
-    } else if (status === "Dropdown") {
+    } else if (status === "Dropdown Select") {
       return "bg-[#F2FCFF] text-[#82E0FF]";
     }
   };
+  const statusCheckColor = (status: string) => {
+    if (status === "Paragraph" || status === "Short Answer") {
+      return "bg-[#F1CC04]";
+    } else if (status === "Video") {
+      return "bg-[#9EB8FF]";
+    } else if (status === "Number") {
+      return "bg-[#E48A8F]";
+    } else if (status === "Multiple Choice") {
+      return "bg-[#8DB97F]";
+    } else if (status === "Dropdown Select") {
+      return "bg-[#82E0FF]";
+    }
+  };
 
-  const sortFilterData = sortData.filter((item) => item.selected);
+  const filteredQuestions = additionalQuestionsData.filter((question) =>
+    sortData.some((item) => item.selected && item.option === question.cat)
+  );
 
   return (
     <div
@@ -79,7 +103,6 @@ const VideoTab = () => {
           >
             {sortSelction.map((item) => (
               <div
-                onClick={() => updateSelected(item.option)}
                 key={item.option}
                 className="w-full items-center flex justify-start gap-4 hover:bg-hovergray cursor-pointer transition-all duration-300 text-dark py-4 px-4"
               >
@@ -89,6 +112,7 @@ const VideoTab = () => {
                   defaultChecked={item.selected}
                 />
                 <label
+                  onClick={() => updateSelected(item.option)}
                   htmlFor={item.option}
                   className="text-sm font-nor text-dark"
                 >
@@ -100,8 +124,29 @@ const VideoTab = () => {
         </div>
       </div>
       <div className="w-full flex flex-col items-start justify-start gap-5">
-        {sortFilterData.map((item, i) => (
-          <div key={i}></div>
+        {filteredQuestions.map((item, i) => (
+          <div
+            key={i}
+            className="w-full flex flex-col items-start justify-start"
+          >
+            <div className="border-b w-[90%] ml-auto">
+              <span
+                className={`w-fit px-4 pt-2 rounded-tl-md rounded-tr-md ${statusColor(
+                  item.cat
+                )} text-sm font-normal`}
+              >
+                {item.cat}
+              </span>
+            </div>
+            <div className="w-full flex items-start justify-start gap-5">
+              <div className="flex-shrink">
+                <span
+                  className={`w-6 h-6 ${statusCheckColor(item.cat)}`}
+                ></span>
+              </div>
+              <div className="flex-grow"></div>
+            </div>
+          </div>
         ))}
       </div>
     </div>
