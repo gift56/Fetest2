@@ -241,23 +241,24 @@ const ApplicationViewPage = () => {
         <div className="w-full lg:flex-[2] flex flex-col items-start justify-start overflow-x-hidden">
           <ApplicationUserProfileDetail />
           <div className="w-full relative h-full">
-            <ul
+            <nav
               ref={tabSliderRef}
               className="w-[720px] h-full overflow-x-scroll overflow-y-hidden whitespace-nowrap scroll-smooth scrollbar-hide relative py-6"
             >
               {tabLinks.map((item) => (
-                <li
-                  key={item}
+                <a
+                  key={item.text}
+                  href={item.id}
                   className={`text-sm font-medium px-8 py-2 relative inline-block cursor-pointer ${
-                    item === tab
+                    item.text === tab
                       ? "text-primary border-b-2 border-primary"
                       : "text-dark"
                   }`}
                 >
-                  {item}
-                </li>
+                  {item.text}
+                </a>
               ))}
-            </ul>
+            </nav>
             <span
               onClick={slideRight}
               className={`absolute w-10 h-10 bg-white/50 top-[20%] flex items-center z-10 justify-center text-[#AEACAC] right-0 rounded-lg cursor-pointer transition-all`}
