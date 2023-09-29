@@ -1,5 +1,26 @@
 const MoreTab = () => {
-  const otherProgramData = [{}];
+  const otherProgramData = [
+    {
+      title: "Misk Traineeship",
+      detail: "Currently At Video Task",
+      status: "Active",
+    },
+    {
+      title: "Summer Internship",
+      detail: "Currently At Video Task",
+      status: "Disqualified",
+    },
+    {
+      title: "XYZ Traineeship",
+      detail: "Currently At Video Task",
+      status: "Disqualified",
+    },
+    {
+      title: "London Internship",
+      detail: "Currently At Video Task",
+      status: "Active",
+    },
+  ];
   return (
     <div
       id="more"
