@@ -25,8 +25,8 @@ const ApplicationViewPage = () => {
     text: "Opportunity Browsing",
     totalNumber: "2325",
   });
-
   const selectRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
 
   const openSelection = (item: any) => {
     setSelectedItem(item);

@@ -460,4 +460,5 @@ export const tabLinks = [
   "Placement",
   "Compliance",
   "Notes",
+  "More",
 ];
