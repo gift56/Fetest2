@@ -186,6 +186,47 @@ const ApplicationViewPage = () => {
                 </p>
               </div>
             </div>
+            <div className="flex flex-col items-start justify-start gap-6 w-full bg-white">
+              {searchedDatas.map((item) => (
+                <div
+                  className="p-4 flex flex-col items-center w-full border-b last:border-none hover:bg-hovergray/20 transition-all duration-300 cursor-pointer"
+                  key={item.id}
+                >
+                  <div className="flex items-center justify-start gap-4 w-full">
+                    <input type="checkbox" />
+                    <div className="select-none w-14 h-14 rounded-full flex items-center justify-center bg-[#EDF4FF] text-[#D0E1FF]">
+                      <span>{item.coverImage}</span>
+                    </div>
+                    <div className="flex flex-col items-start justify-start gap-2">
+                      <h2 className="text-sm font-semibold text-black">
+                        {item.name}
+                      </h2>
+                      <p className="text-xs font-medium text-black">
+                        {item.nationality}
+                      </p>
+                      <p className="text-xs font-normal text-black">
+                        {item.education}
+                      </p>
+                      <p className="text-xs font-normal text-primary flex items-center justify-start gap-4">
+                        {item.tag.map((item, i) => (
+                          <span key={i}>{item}</span>
+                        ))}
+                      </p>
+                      <p className="text-xs font-medium text-[#037092] flex items-center justify-start gap-4">
+                        {item.experience.map((item, i) => (
+                          <span
+                            key={i}
+                            className="bg-[#F3FAFC] py-2 px-4 rounded-xl"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="w-full lg:flex-[2.5] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden"></div>
