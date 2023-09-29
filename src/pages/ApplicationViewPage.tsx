@@ -10,6 +10,7 @@ import {
   EductaionTab,
   PlacementTab,
   ProfileTab,
+  VideoTab,
 } from "../components";
 import { BsChevronRight } from "react-icons/bs";
 
@@ -278,6 +279,7 @@ const ApplicationViewPage = () => {
             <EductaionTab />
             <PlacementTab />
             <ComplianceTab />
+            <VideoTab />
           </div>
         </div>
       </div>
