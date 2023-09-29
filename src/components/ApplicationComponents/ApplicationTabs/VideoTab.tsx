@@ -37,6 +37,10 @@ const VideoTab = () => {
     };
   }, []);
 
+  const statusColor=(status:string)=>{
+    if()
+  }
+
   return (
     <div
       id="video"
@@ -83,6 +87,7 @@ const VideoTab = () => {
           </div>
         </div>
       </div>
+      <div className="w-full flex flex-col items-start justify-start gap-5"></div>
     </div>
   );
 };
