@@ -265,6 +265,9 @@ const ApplicationViewPage = () => {
               <BsChevronRight size={20} />
             </span>
           </div>
+          <div className="w-full">
+            
+          </div>
         </div>
       </div>
     </MainLayout>
