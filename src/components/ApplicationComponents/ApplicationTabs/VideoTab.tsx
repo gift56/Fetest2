@@ -8,7 +8,9 @@ const VideoTab = () => {
         <h2 className="text-sm font-semibold text-dark">
           Additional Questions
         </h2>
-        <div className="w-[200px] h-10 border border-[#EBEBEB] rounded-lg"></div>
+        <div className="w-[200px] h-10 border border-[#EBEBEB] rounded-lg px-3 flex items-center justify-start select-none cursor-pointer">
+          <span className="text-sm font-normal text-dark">Sort</span>
+        </div>
       </div>
     </div>
   );
