@@ -8,6 +8,7 @@ import {
 import { BiChevronDown } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
+import { ApplicationUserProfileDetail } from "../components";
 
 interface Data {
   id: string;
@@ -230,7 +231,7 @@ const ApplicationViewPage = () => {
           </div>
         </div>
         <div className="w-full lg:flex-[2.5] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden">
-          
+          <ApplicationUserProfileDetail />
         </div>
       </div>
     </MainLayout>
