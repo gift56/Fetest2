@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
-import { candidateData, selectOptions } from "../utils/constant";
+import { candidateData, selectOptions, tabLinks } from "../utils/constant";
 import { BiChevronDown } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
@@ -27,7 +27,7 @@ const ApplicationViewPage = () => {
     totalNumber: "2325",
   });
   const selectRef = useRef<HTMLDivElement>(null);
-  const tabSliderRef = useRef<HTMLDivElement>(null);
+  const tabSliderRef = useRef<HTMLUListElement>(null);
   const slideRight = () => {
     if (tabSliderRef.current) {
       const slider = tabSliderRef.current;
@@ -240,10 +240,21 @@ const ApplicationViewPage = () => {
         </div>
         <div className="w-full lg:flex-[2] flex flex-col items-start justify-start">
           <ApplicationUserProfileDetail />
-          <div
+          <ul
             ref={tabSliderRef}
-            className="w-full h-full overflow-x-scroll overflow-y-hidden whitespace-nowrap scroll-smooth scrollbar-hide relative"
-          ></div>
+            className="w-full h-full overflow-x-scroll overflow-y-hidden whitespace-nowrap scroll-smooth scrollbar-hide relative py-6"
+          >
+            {tabLinks.map((item) => (
+              <li
+                key={item}
+                className={`text-sm font-medium ${
+                  item === tab ? "text-primary border-b border-primary" : "text-dark"
+                }`}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </MainLayout>
