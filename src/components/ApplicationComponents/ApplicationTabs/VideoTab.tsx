@@ -7,9 +7,9 @@ type SortItem = {
 };
 
 const VideoTab = () => {
-  const [openSort, setOpenSort] = useState(false);
+  const [openSortQuestion, setOpenSortQuestion] = useState(false);
   const [sortData, setSortData] = useState<SortItem[]>(sortSelction);
-  const selectRef = useRef<HTMLDivElement>(null);
+  const sortQuestionRef = useRef<HTMLDivElement>(null);
 
   const updateSelected = (optionToUpdate: string) => {
     const updatedSortData = sortData.map((item) => {
@@ -25,10 +25,10 @@ const VideoTab = () => {
   useEffect(() => {
     const handleClickOutside: EventListener = (event) => {
       if (
-        selectRef.current &&
-        !selectRef.current.contains(event.target as Node)
+        sortQuestionRef.current &&
+        !sortQuestionRef.current.contains(event.target as Node)
       ) {
-        setOpenSort(false);
+        setOpenSortQuestion(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -37,9 +37,19 @@ const VideoTab = () => {
     };
   }, []);
 
-  const statusColor=(status:string)=>{
-    if()
-  }
+  const statusColor = (status: string) => {
+    if (status === "Paragraph" || status === "Short Answer") {
+      return "text-[#F1CC04] bg-[#FFFBE4]";
+    } else if (status === "Video") {
+      return "bg-[#EEF2FF] text-[#9EB8FF]";
+    } else if (status === "Number") {
+      return "bg-[#FFF6F7] text-[#E48A8F]";
+    } else if (status === "Multiple Choice") {
+      return "bg-[#F8FAFF] text-[#8DB97F]";
+    } else if (status === "Dropdown") {
+      return "bg-[#F2FCFF] text-[#82E0FF]";
+    }
+  };
 
   return (
     <div
@@ -52,15 +62,15 @@ const VideoTab = () => {
         </h2>
         <div className="w-[200px] h-10 border border-[#EBEBEB] rounded-lg px-3 relative flex items-center justify-start select-none cursor-pointer">
           <span
-            onClick={() => setOpenSort(true)}
+            onClick={() => setOpenSortQuestion(true)}
             className="text-sm font-normal text-dark"
           >
             Sort
           </span>
           <div
-            ref={selectRef}
+            ref={sortQuestionRef}
             className={`${
-              openSort
+              openSortQuestion
                 ? "scale-x-100 opacity-100 top-12"
                 : "scale-x-0 opacity-0 top-0"
             } w-full absolute bg-white flex flex-col items-start justify-start rounded-bl-2xl rounded-br-2xl shadow-selectShad z-10 transition-all duration-300`}
