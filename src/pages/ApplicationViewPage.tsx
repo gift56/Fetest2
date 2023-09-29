@@ -238,25 +238,33 @@ const ApplicationViewPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:flex-[2] flex flex-col items-start justify-start">
+        <div className="w-full lg:flex-[2] flex flex-col items-start justify-start overflow-x-hidden">
           <ApplicationUserProfileDetail />
-          <ul
-            ref={tabSliderRef}
-            className="w-full h-full overflow-x-scroll overflow-y-hidden whitespace-nowrap scroll-smooth scrollbar-hide relative py-6"
-          >
-            {tabLinks.map((item) => (
-              <li
-                key={item}
-                className={`text-sm font-medium px-4 py-2 ${
-                  item === tab
-                    ? "text-primary border-b border-primary"
-                    : "text-dark"
-                }`}
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="w-full relative h-full">
+            <ul
+              ref={tabSliderRef}
+              className="w-[720px] h-full overflow-x-scroll overflow-y-hidden whitespace-nowrap scroll-smooth scrollbar-hide relative py-6"
+            >
+              {tabLinks.map((item) => (
+                <li
+                  key={item}
+                  className={`text-sm font-medium px-8 py-2 relative inline-block cursor-pointer ${
+                    item === tab
+                      ? "text-primary border-b-2 border-primary"
+                      : "text-dark"
+                  }`}
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <span
+              onClick={slideRight}
+              className={`absolute w-10 h-10 bg-white/50 top-[50%] flex items-center z-10 justify-center text-[#AEACAC] right-0 rounded-lg cursor-pointer transition-all`}
+            >
+              <BsChevronRight size={23} className="ml-1" />
+            </span>
+          </div>
         </div>
       </div>
     </MainLayout>
