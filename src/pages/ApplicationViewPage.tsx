@@ -266,10 +266,8 @@ const ApplicationViewPage = () => {
               <BsChevronRight size={20} />
             </span>
           </div>
-          <div className="w-full">
-            <div id="profile">
-              <ProfileTab />
-            </div>
+          <div className="w-full flex flex-col items-start justify-start gap-5">
+            <ProfileTab />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 const ProfileTab = () => {
-  return <div>ProfileTab</div>;
+  return <div id="profile">ProfileTab</div>;
 };
 
 export default ProfileTab;
