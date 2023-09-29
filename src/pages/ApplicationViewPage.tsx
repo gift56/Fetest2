@@ -24,8 +24,9 @@ const ApplicationViewPage = () => {
   const [openSelect, setOpenSelect] = useState(false);
   const [selectedItem, setSelectedItem] = useState({
     text: "Opportunity Browsing",
-    total: "2325",
+    totalNumber: "2325",
   });
+
   const selectRef = useRef<HTMLDivElement>(null);
 
   const openSelection = (item: any) => {
@@ -91,7 +92,7 @@ const ApplicationViewPage = () => {
               </span>
               <span className="text-base font-medium flex items-center justify-between w-full px-2 border-x-2">
                 <span>{selectedItem.text}</span>
-                <span>{selectedItem.total}</span>
+                <span>{selectedItem.totalNumber}</span>
               </span>
               <span>
                 <BiChevronDown className="w-6 h-6" />
