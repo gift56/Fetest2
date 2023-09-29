@@ -51,7 +51,7 @@ const MoreTab = () => {
                 item.status === "Active"
                   ? "bg-[#DBF5D3] text-[#087B2F] border-[#9DDC89]"
                   : "bg-[#FFECEA] text-[#FC402B] border-[#FEA095]"
-              } text-xs font-normal`}
+              } text-xs font-normal px-4 py-1 rounded-full`}
             >
               {item.status}
             </span>

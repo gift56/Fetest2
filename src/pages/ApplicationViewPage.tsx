@@ -8,6 +8,7 @@ import {
   ApplicationUserProfileDetail,
   ComplianceTab,
   EductaionTab,
+  MoreTab,
   PlacementTab,
   ProfileTab,
   VideoTab,
@@ -280,6 +281,7 @@ const ApplicationViewPage = () => {
             <PlacementTab />
             <ComplianceTab />
             <VideoTab />
+            <MoreTab />
           </div>
         </div>
       </div>
