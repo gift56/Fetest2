@@ -39,7 +39,10 @@ const ProfileTab = () => {
               <item.icon size={20} />
             </span>
             <div className="flex flex-col items-start justify-start gap-2">
-              <h4 className="text-[#5F5F5F] text-sm font-normal">{item.headline}</h4>
+              <h4 className="text-[#5F5F5F] text-sm font-normal">
+                {item.headline}
+              </h4>
+              <h2 className="text-dark font-medium text-sm">{item.detail}</h2>
             </div>
           </div>
         ))}
