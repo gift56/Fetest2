@@ -9,6 +9,21 @@ const ProfileTab = () => {
       headline: "Nationality",
       detail: "Sri Lankan",
     },
+    {
+      icon: LuUserSquare,
+      headline: "National ID",
+      detail: "0000000000",
+    },
+    {
+      icon: LuUser,
+      headline: "Gender",
+      detail: "Female",
+    },
+    {
+      icon: BsCalendar2Event,
+      headline: "Date of Birth",
+      detail: "00-00-0000",
+    },
   ];
   return (
     <div
