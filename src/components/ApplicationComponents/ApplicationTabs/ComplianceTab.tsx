@@ -18,6 +18,7 @@ const ComplianceTab = () => {
           </span>
         </div>
       </div>
+      <div className="w-full h-[901px] bg-[#F1F1F1] rounded"></div>
     </div>
   );
 };
