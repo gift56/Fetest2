@@ -139,21 +139,34 @@ const VideoTab = () => {
               </span>
             </div>
             <div className="w-full flex items-start justify-start gap-5">
-              <div>
-                <span
-                  className={`w-3 h-3 block rounded-full p-5 ${statusCheckColor(
-                    item.cat
-                  )}`}
-                ></span>
-              </div>
+              <div
+                className={`!w-1 !h-1 block rounded-full p-5 ${statusCheckColor(
+                  item.cat
+                )}`}
+              ></div>
               <div className="flex-grow flex items-start justify-start flex-col gap-1">
                 <h3 className="text-sm font-light text-black">
                   {item.content}
                 </h3>
                 {item.reply && (
-                  <p className="bg-[#F8FAFF] rounded-2xl p-3 tex-sm font-normal text-[#216C84]">
+                  <p className="bg-[#F8FAFF] rounded-2xl p-3 text-sm font-normal text-[#216C84]">
                     {item.reply}
                   </p>
+                )}
+                {item.choices && (
+                  <p className="text-xs font-medium text-[#037092] flex items-center justify-start gap-4">
+                    {item.choices.map((item, i) => (
+                      <span
+                        key={i}
+                        className="bg-[#F3FAFC] py-2 px-4 rounded-xl"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </p>
+                )}
+                {item.img && (
+                  <img src={item.img} alt="video_image" />
                 )}
               </div>
             </div>
