@@ -38,9 +38,7 @@ const Sidebar = () => {
                 collapse
                   ? "justify-start w-full px-2"
                   : "justify-center w-fit px-3"
-              } ${
-                location.pathname === item.to ? "bg-hovergray text-primary" : ""
-              }`}
+              } ${activePath(item.to) ? "bg-hovergray text-primary" : ""}`}
             >
               <span>
                 <item.icon className="w-6 h-6" />
