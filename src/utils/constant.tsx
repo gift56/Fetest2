@@ -460,5 +460,5 @@ export const tabLinks = [
   { id: "#placement", text: "Placement" },
   { id: "#compliance", text: "Compliance" },
   { id: "#notes", text: "Notes" },
-  { id: "", text: "More" },
+  { id: "#more", text: "More" },
 ];
