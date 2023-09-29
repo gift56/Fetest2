@@ -527,9 +527,16 @@ export const additionalQuestionsData = [
   },
   {
     cat: "Multiple Choice",
-    healine: "Number",
+    healine: "Multiple Choice",
     content:
       "What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply",
     choices: ["New York", "New York", "New York"],
+  },
+  {
+    cat: "Dropdown Select",
+    healine: "Dropdown",
+    content:
+      "What regions within Saudi Arabia are you available to pursue a traineeship opportunity? You may select multiple options that apply",
+    reply: "Dorem ipsum dolor sit amet, consectetur adipiscing elit. ",
   },
 ];
