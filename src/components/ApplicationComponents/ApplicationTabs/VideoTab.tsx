@@ -48,7 +48,7 @@ const VideoTab = () => {
         </h2>
         <div className="w-[200px] h-10 border border-[#EBEBEB] rounded-lg px-3 relative flex items-center justify-start select-none cursor-pointer">
           <span
-            onClick={() => setOpenSort(!openSort)}
+            onClick={() => setOpenSort(true)}
             className="text-sm font-normal text-dark"
           >
             Sort
@@ -65,14 +65,19 @@ const VideoTab = () => {
               <div
                 onClick={() => updateSelected(item.option)}
                 key={item.option}
-                className="w-full items-center rounded-2xl  flex justify-between gap-4 shadow-selectShad hover:bg-hovergray cursor-pointer transition-all duration-300 text-dark py-4 px-4 "
+                className="w-full items-center rounded-2xl flex justify-between gap-4 shadow-selectShad hover:bg-hovergray cursor-pointer transition-all duration-300 text-dark py-4 px-4"
               >
                 <input
                   type="checkbox"
                   id={item.option}
                   defaultChecked={item.selected}
                 />
-                <label htmlFor={item.option} className="text-sm font-nor text-dark">{item.option}</label>
+                <label
+                  htmlFor={item.option}
+                  className="text-sm font-nor text-dark"
+                >
+                  {item.option}
+                </label>
               </div>
             ))}
           </div>
