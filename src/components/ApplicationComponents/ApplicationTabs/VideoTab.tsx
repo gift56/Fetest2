@@ -8,7 +8,7 @@ const VideoTab = () => {
         <h2 className="text-sm font-semibold text-dark">
           Additional Questions
         </h2>
-        
+        <div className="w-[200px] h-10 border border-[#EBEBEB] rounded-lg"></div>
       </div>
     </div>
   );
