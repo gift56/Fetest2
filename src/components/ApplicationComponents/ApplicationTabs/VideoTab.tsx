@@ -138,7 +138,7 @@ const VideoTab = () => {
                 {item.cat}
               </span>
             </div>
-            <div className="w-full flex items-start justify-start gap-5">
+            <div className="w-full flex items-start justify-start gap-5 py-5">
               <div
                 className={`!w-1 !h-1 block rounded-full p-5 ${statusCheckColor(
                   item.cat
