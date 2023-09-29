@@ -247,8 +247,10 @@ const ApplicationViewPage = () => {
             {tabLinks.map((item) => (
               <li
                 key={item}
-                className={`text-sm font-medium ${
-                  item === tab ? "text-primary border-b border-primary" : "text-dark"
+                className={`text-sm font-medium px-4 py-2 ${
+                  item === tab
+                    ? "text-primary border-b border-primary"
+                    : "text-dark"
                 }`}
               >
                 {item}
