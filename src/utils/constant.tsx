@@ -462,3 +462,42 @@ export const tabLinks = [
   { id: "#notes", text: "Notes" },
   { id: "#more", text: "More" },
 ];
+
+export const sortSelction = [
+  {
+    selected: true,
+    option: "Paragraph",
+  },
+  {
+    selected: true,
+    option: "Short Answer",
+  },
+  {
+    selected: false,
+    option: "Yes/ No",
+  },
+  {
+    selected: true,
+    option: "Dropdown Select",
+  },
+  {
+    selected: true,
+    option: "Multiple Choice",
+  },
+  {
+    selected: false,
+    option: "Date",
+  },
+  {
+    selected: false,
+    option: "Number",
+  },
+  {
+    selected: false,
+    option: "File Upload",
+  },
+  {
+    selected: true,
+    option: "Video",
+  },
+];
