@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import { candidateData, possibleFilter } from "../utils/constant";
 import { BiChevronDown } from "react-icons/bi";
@@ -17,12 +17,29 @@ interface Data {
 const ApplicationViewPage = () => {
   const [data] = useState(candidateData);
   const [search, setSearch] = useState("");
-  const [selectedItems, setSelectedItems] = useState<Data[]>([]);
+  const [openSelect, setOpenSelect] = useState(false);
+  const [selectedItem, setSelectedItem] = useState("Opportunity Browsing");
+  const selectRef = useRef<HTMLDivElement>(null);
 
-  const handleItemClick = (item: Data) => {
-    const updatedSelectedItems = [...selectedItems, item];
-    setSelectedItems(updatedSelectedItems);
+  const openSelection = (item: string) => {
+    setSelectedItem(item);
+    setOpenSelect(false);
   };
+
+  useEffect(() => {
+    const handleClickOutside: EventListener = (event) => {
+      if (
+        selectRef.current &&
+        !selectRef.current.contains(event.target as Node)
+      ) {
+        setOpenSelect(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const keys: (keyof Data)[] = [
     "name",
