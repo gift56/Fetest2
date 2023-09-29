@@ -452,24 +452,3 @@ export const opportunityOverviewsData = [
     ],
   },
 ];
-
-export const detailedOverviewTableData = [
-  {
-    name: "UX Internship",
-    status: ["Active", "Disqualified"],
-    applied: ["20", "7"],
-    recommended: ["17", "4"],
-    interview: ["4", "1"],
-    offer: ["3", "1"],
-    hired: ["1", "1"],
-  },
-  {
-    name: "Art Internship",
-    status: ["Active", "Disqualified"],
-    applied: ["44", "24"],
-    recommended: ["32", "4"],
-    interview: ["21", "7"],
-    offer: ["19", "8"],
-    hired: ["10", "3"],
-  },
-];

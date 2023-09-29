@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   PiSortDescendingBold,
   PiSortAscendingBold,
@@ -8,9 +9,8 @@ import { GoSearch } from "react-icons/go";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { LiaChartPieSolid } from "react-icons/lia";
 import {
-  detailedData,
   detailedOverviewTableColumns,
-  detailedOverviewTableData,
+  opportunityOverviewsData,
   possibleSort,
 } from "../../utils/constant";
 import OpportunityTable from "./OpportunityTable";
@@ -19,7 +19,7 @@ const DetailedOverview = () => {
   const [openSort, setOpenSort] = useState(false);
   const [sortedItem, setSortedItem] = useState("Sort by");
   const [search, setSearch] = useState("");
-  const [data] = useState(detailedOverviewTableData);
+  const [data] = useState(opportunityOverviewsData);
   const sortRef = useRef<HTMLDivElement>(null);
 
   const openSelectionSort = (item: string) => {
@@ -43,118 +43,120 @@ const DetailedOverview = () => {
     };
   }, []);
 
-  const tableActions = filteredData.map((item) => ({
-    name: (
-      <div className="px-4 h-40 flex items-center justify-start w-full">
-        <span className="text-sm font-normal text-dark">{item.name}</span>
-      </div>
-    ),
-    status: (
-      <div className="w-full flex flex-col items-start justify-between h-40 pl-2">
-        {item.status.map((item, i) => (
-          <div key={i} className="w-full py-3">
-            <span
-              className={`w-fit py-1 px-4 text-dark text-xs font-medium border rounded-full ${
-                item === "Active"
-                  ? "bg-[#F2FBE9] border-[#CBE3BF]"
-                  : "bg-[#FFECEA] border-[#FED8D4]"
-              }`}
-            >
-              {item}
+  const tableActions = data.flatMap((item) =>
+    item.tableData.map((item) => ({
+      name: (
+        <div className="px-4 h-40 flex items-center justify-start w-full">
+          <span className="text-sm font-normal text-dark">{item.name}</span>
+        </div>
+      ),
+      status: (
+        <div className="w-full flex flex-col items-start justify-between h-40 pl-2">
+          {item.status.map((item, i) => (
+            <div key={i} className="w-full py-3">
+              <span
+                className={`w-fit py-1 px-4 text-dark text-xs font-medium border rounded-full ${
+                  item === "Active"
+                    ? "bg-[#F2FBE9] border-[#CBE3BF]"
+                    : "bg-[#FFECEA] border-[#FED8D4]"
+                }`}
+              >
+                {item}
+              </span>
+            </div>
+          ))}
+          <div className="w-full py-3 bg-[#F6FAFF] px-2 text-dark text-sm font-medium ">
+            <span>Sub - Total</span>
+          </div>
+        </div>
+      ),
+      applied: (
+        <div className="w-full flex flex-col items-start justify-between h-40">
+          {item.applied.map((item, i) => (
+            <div key={i} className="w-full py-3 pl-4">
+              <span className="text-dark text-xs font-medium">{item}</span>
+            </div>
+          ))}
+          <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
+            <span>
+              {item.applied.reduce((total, item) => {
+                const itemPrice = parseFloat(item.replace(",", ""));
+                return total + itemPrice;
+              }, 0)}
             </span>
           </div>
-        ))}
-        <div className="w-full py-3 bg-[#F6FAFF] px-2 text-dark text-sm font-medium ">
-          <span>Sub - Total</span>
         </div>
-      </div>
-    ),
-    applied: (
-      <div className="w-full flex flex-col items-start justify-between h-40">
-        {item.applied.map((item, i) => (
-          <div key={i} className="w-full py-3 pl-4">
-            <span className="text-dark text-xs font-medium">{item}</span>
+      ),
+      recommended: (
+        <div className="w-full flex flex-col items-start justify-between h-40">
+          {item.recommended.map((item, i) => (
+            <div key={i} className="w-full py-3 pl-4">
+              <span className="text-dark text-xs font-medium">{item}</span>
+            </div>
+          ))}
+          <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
+            <span>
+              {item.recommended.reduce((total, item) => {
+                const itemPrice = parseFloat(item.replace(",", ""));
+                return total + itemPrice;
+              }, 0)}
+            </span>
           </div>
-        ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
-          <span>
-            {item.applied.reduce((total, item) => {
-              const itemPrice = parseFloat(item.replace(",", ""));
-              return total + itemPrice;
-            }, 0)}
-          </span>
         </div>
-      </div>
-    ),
-    recommended: (
-      <div className="w-full flex flex-col items-start justify-between h-40">
-        {item.recommended.map((item, i) => (
-          <div key={i} className="w-full py-3 pl-4">
-            <span className="text-dark text-xs font-medium">{item}</span>
+      ),
+      interview: (
+        <div className="w-full flex flex-col items-start justify-between h-40">
+          {item.interview.map((item: string, i: number) => (
+            <div key={i} className="w-full py-3 pl-4">
+              <span className="text-dark text-xs font-medium">{item}</span>
+            </div>
+          ))}
+          <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
+            <span>
+              {item.interview.reduce((total, item) => {
+                const itemPrice = parseFloat(item.replace(",", ""));
+                return total + itemPrice;
+              }, 0)}
+            </span>
           </div>
-        ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
-          <span>
-            {item.recommended.reduce((total, item) => {
-              const itemPrice = parseFloat(item.replace(",", ""));
-              return total + itemPrice;
-            }, 0)}
-          </span>
         </div>
-      </div>
-    ),
-    interview: (
-      <div className="w-full flex flex-col items-start justify-between h-40">
-        {item.interview.map((item: string, i: number) => (
-          <div key={i} className="w-full py-3 pl-4">
-            <span className="text-dark text-xs font-medium">{item}</span>
+      ),
+      offer: (
+        <div className="w-full flex flex-col items-start justify-between h-40">
+          {item.offer.map((item, i) => (
+            <div key={i} className="w-full py-3 pl-4">
+              <span className="text-dark text-xs font-medium">{item}</span>
+            </div>
+          ))}
+          <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
+            <span>
+              {item.offer.reduce((total, item) => {
+                const itemPrice = parseFloat(item.replace(",", ""));
+                return total + itemPrice;
+              }, 0)}
+            </span>
           </div>
-        ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
-          <span>
-            {item.interview.reduce((total, item) => {
-              const itemPrice = parseFloat(item.replace(",", ""));
-              return total + itemPrice;
-            }, 0)}
-          </span>
         </div>
-      </div>
-    ),
-    offer: (
-      <div className="w-full flex flex-col items-start justify-between h-40">
-        {item.offer.map((item, i) => (
-          <div key={i} className="w-full py-3 pl-4">
-            <span className="text-dark text-xs font-medium">{item}</span>
+      ),
+      hired: (
+        <div className="w-full flex flex-col items-start justify-between h-40">
+          {item.hired.map((item, i) => (
+            <div key={i} className="w-full py-3 pl-4">
+              <span className="text-dark text-xs font-medium">{item}</span>
+            </div>
+          ))}
+          <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
+            <span>
+              {item.hired.reduce((total, item) => {
+                const itemPrice = parseFloat(item.replace(",", ""));
+                return total + itemPrice;
+              }, 0)}
+            </span>
           </div>
-        ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
-          <span>
-            {item.offer.reduce((total, item) => {
-              const itemPrice = parseFloat(item.replace(",", ""));
-              return total + itemPrice;
-            }, 0)}
-          </span>
         </div>
-      </div>
-    ),
-    hired: (
-      <div className="w-full flex flex-col items-start justify-between h-40">
-        {item.hired.map((item, i) => (
-          <div key={i} className="w-full py-3 pl-4">
-            <span className="text-dark text-xs font-medium">{item}</span>
-          </div>
-        ))}
-        <div className="w-full py-3 bg-[#F6FAFF] pl-4 text-dark text-sm font-medium ">
-          <span>
-            {item.hired.reduce((total, item) => {
-              const itemPrice = parseFloat(item.replace(",", ""));
-              return total + itemPrice;
-            }, 0)}
-          </span>
-        </div>
-      </div>
-    ),
-  }));
+      ),
+    }))
+  );
 
   return (
     <div className="flex flex-col items-start justify-start w-full gap-6">
@@ -227,50 +229,62 @@ const DetailedOverview = () => {
           </button>
         </div>
       </div>
-      <div className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto flex flex-col items-start justify-start gap-5">
-        <div className="w-full flex items-center justify-between gap-3">
-          <h2 className="text-sm font-medium text-dark">Google</h2>
-          <div className="flex items-center justify-end gap-5">
-            <span className="relative text-dark w-10 h-10 flex items-center justify-center shadow-cardShad border border-[#ECECEC] rounded-lg cursor-pointer group">
-              <LiaChartPieSolid className="w-6 h-6" />
-              <span className="text-sm font-normal text-white shadow-tooltipShad bg-dark absolute top-12 text-center -left-[180%] py-2 px-2 rounded w-[150px] group-hover:scale-100 scale-0 transition-all duration-300">
-                <span className="relative before:top-[-50%] before:rotate-45 before:left-[50%] before:w-5 before:h-5 before:content-[''] before:bg-dark before:absolute">
-                  <span className="relative">View Data Charts</span>
+      <div className="w-full flex flex-col items-start justify-start gap-8">
+        {opportunityOverviewsData.map((item) => (
+          <div
+            key={item.id}
+            className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto flex flex-col items-start justify-start gap-5"
+          >
+            <div className="w-full flex items-center justify-between gap-3">
+              <h2 className="text-sm font-medium text-dark">{item.name}</h2>
+              <div className="flex items-center justify-end gap-5">
+                <Link
+                  to={``}
+                  className="relative text-dark w-10 h-10 flex items-center justify-center shadow-cardShad border border-[#ECECEC] rounded-lg cursor-pointer group"
+                >
+                  <LiaChartPieSolid className="w-6 h-6" />
+                  <span className="text-sm font-normal text-white shadow-tooltipShad bg-dark absolute top-12 text-center -left-[180%] py-2 px-2 rounded w-[150px] group-hover:scale-100 scale-0 transition-all duration-300">
+                    <span className="relative before:top-[-50%] before:rotate-45 before:left-[50%] before:w-5 before:h-5 before:content-[''] before:bg-dark before:absolute">
+                      <span className="relative">View Data Charts</span>
+                    </span>
+                  </span>
+                </Link>
+                <span className="relative text-dark w-10 h-10 flex items-center justify-center shadow-cardShad border border-[#ECECEC] rounded-lg cursor-pointer group">
+                  <HiOutlineDocumentArrowDown className="w-6 h-6" />
+                  <span className="text-sm font-normal text-white shadow-tooltipShad bg-dark absolute top-12 text-center -left-20 py-2 px-2 rounded w-[150px] group-hover:scale-100 scale-0 transition-all duration-300">
+                    <span className="relative before:top-[-50%] before:rotate-45 before:left-[50%] before:w-5 before:h-5 before:content-[''] before:bg-dark before:absolute">
+                      <span className="relative">CSV Download</span>
+                    </span>
+                  </span>
                 </span>
-              </span>
-            </span>
-            <span className="relative text-dark w-10 h-10 flex items-center justify-center shadow-cardShad border border-[#ECECEC] rounded-lg cursor-pointer group">
-              <HiOutlineDocumentArrowDown className="w-6 h-6" />
-              <span className="text-sm font-normal text-white shadow-tooltipShad bg-dark absolute top-12 text-center -left-20 py-2 px-2 rounded w-[150px] group-hover:scale-100 scale-0 transition-all duration-300">
-                <span className="relative before:top-[-50%] before:rotate-45 before:left-[50%] before:w-5 before:h-5 before:content-[''] before:bg-dark before:absolute">
-                  <span className="relative">CSV Download</span>
-                </span>
-              </span>
-            </span>
-          </div>
-        </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-5 xl:grid-cols-6">
-          {detailedData.map((item, i) => (
-            <div
-              key={i}
-              className="w-full bg-white flex flex-col gap-3 items-center justify-center shadow-cardShad rounded-2xl border border-[#F5F5F5] p-4"
-            >
-              <h2 className="text-sm font-light text-dark text-center">
-                {item.headline}
-              </h2>
-              <p className="text-base font-medium text-dark">{item.total}</p>
+              </div>
             </div>
-          ))}
-        </div>
-        <div className="bg-white rounded-lg shadow-cardShad w-full h-[90vh] overflow-y-auto overflow-x-hidden mt-4">
-          <div className="w-full">
-            <OpportunityTable
-              columns={detailedOverviewTableColumns}
-              className="first:!text-start px-4"
-              activities={tableActions}
-            />
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 items-start justify-start gap-5 xl:grid-cols-6">
+              {item.details.map((item, i) => (
+                <div
+                  key={i}
+                  className="w-full bg-white flex flex-col gap-3 items-center justify-center shadow-cardShad rounded-2xl border border-[#F5F5F5] p-4"
+                >
+                  <h2 className="text-sm font-light text-dark text-center">
+                    {item.headline}
+                  </h2>
+                  <p className="text-base font-medium text-dark">
+                    {item.total}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="bg-white rounded-lg shadow-cardShad w-full h-[90vh] overflow-y-auto overflow-x-hidden mt-4">
+              <div className="w-full">
+                <OpportunityTable
+                  columns={detailedOverviewTableColumns}
+                  className="first:!text-start px-4"
+                  activities={tableActions}
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

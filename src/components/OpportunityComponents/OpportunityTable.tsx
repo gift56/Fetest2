@@ -10,6 +10,8 @@ interface TableProp {
 }
 
 const OpportunityTable = ({ columns, activities, className }: TableProp) => {
+ 
+
   return (
     <table className="w-full">
       <thead className="h-10">
@@ -33,10 +35,7 @@ const OpportunityTable = ({ columns, activities, className }: TableProp) => {
               className="h-fit w-full border-b border-[#EAECF0] last:border-none"
             >
               {columns?.map((col, i) => (
-                <td
-                  key={i}
-                  className="first:text-left"
-                >
+                <td key={i} className="first:text-left">
                   {row[col.field]}
                 </td>
               ))}
