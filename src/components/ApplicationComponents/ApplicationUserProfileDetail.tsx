@@ -18,12 +18,13 @@ const ApplicationUserProfileDetail = () => {
               <span>Aaliyah Sanderson</span>
               <span className="text-xs font-medium text-[#037092] flex items-center justify-start gap-4">
                 {experience.map((item, i) => (
-                  <span key={i} className="bg-[#F3FAFC] py-2 px-4 rounded-xl">
+                  <span key={i} className="bg-[#F3FAFC] py-2 px-4 rounded-full">
                     {item}
                   </span>
                 ))}
               </span>
             </h2>
+            <p></p>
           </div>
         </div>
       </div>
