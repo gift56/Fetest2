@@ -26,7 +26,18 @@ const ApplicationViewPage = () => {
     totalNumber: "2325",
   });
   const selectRef = useRef<HTMLDivElement>(null);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const tabSliderRef = useRef<HTMLDivElement>(null);
+  const slideRight = () => {
+    if (tabSliderRef.current) {
+      const slider = tabSliderRef.current;
+      let maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+      if (slider.scrollLeft < maxScrollLeft) {
+        slider.scrollLeft = slider.scrollLeft + 40;
+      } else {
+        slider.scrollLeft = 0;
+      }
+    }
+  };
 
   const openSelection = (item: any) => {
     setSelectedItem(item);
@@ -72,7 +83,6 @@ const ApplicationViewPage = () => {
       })
     );
   };
-
   const searchedDatas = searchTerm(data);
 
   return (
