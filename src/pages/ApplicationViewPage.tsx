@@ -33,7 +33,7 @@ const ApplicationViewPage = () => {
       const slider = tabSliderRef.current;
       let maxScrollLeft = slider.scrollWidth - slider.clientWidth;
       if (slider.scrollLeft < maxScrollLeft) {
-        slider.scrollLeft = slider.scrollLeft + 40;
+        slider.scrollLeft = slider.scrollLeft + 120;
       } else {
         slider.scrollLeft = 0;
       }
@@ -260,9 +260,9 @@ const ApplicationViewPage = () => {
             </ul>
             <span
               onClick={slideRight}
-              className={`absolute w-10 h-10 bg-white/50 top-[50%] flex items-center z-10 justify-center text-[#AEACAC] right-0 rounded-lg cursor-pointer transition-all`}
+              className={`absolute w-10 h-10 bg-white/50 top-[20%] flex items-center z-10 justify-center text-[#AEACAC] right-0 rounded-lg cursor-pointer transition-all`}
             >
-              <BsChevronRight size={23} className="ml-1" />
+              <BsChevronRight size={20} />
             </span>
           </div>
         </div>
