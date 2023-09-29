@@ -35,7 +35,7 @@ const ProfileTab = () => {
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start justify-start">
         {profileData.map((item, i) => (
           <div key={i} className="w-full flex items-center justify-start gap-5">
-            <span className="text-dark">
+            <span className="text-dark w-10 h-10 border border-[#ECECEC] flex items-center justify-center rounded-lg">
               <item.icon size={20} />
             </span>
             <div className="flex flex-col items-start justify-start gap-2">
