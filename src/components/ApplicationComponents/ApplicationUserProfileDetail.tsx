@@ -12,7 +12,7 @@ const ApplicationUserProfileDetail = () => {
         />
       </div>
       <div className="flex-grow flex flex-col items-start justify-start gap-4">
-        <div className="w-full flex lg:items-center justify-between gap-5 flex-col lg:flex-row items-start">
+        <div className="w-full flex lg:items-center justify-between gap-5 flex-col lg:flex-row items-start relative">
           <div className="flex flex-col items-start justify-start gap-3">
             <h2 className="flex items-center gap-4 text-sm font-semibold text-black">
               <span>Aaliyah Sanderson</span>
@@ -29,10 +29,12 @@ const ApplicationUserProfileDetail = () => {
               <span className="border-r border-black px-2">
                 aaliyahs@gmail.com
               </span>
-              <span className="px-3">
-                +00 000 000 0000
-              </span>
+              <span className="px-3">+00 000 000 0000</span>
             </p>
+          </div>
+          <div className="w-fit py-2 px-4 flex items-center bg-white shadow-selectShad gap-8 rounded-full absolute right-0">
+            <h3 className="text-sm font-medium text-dark">Overall Score</h3>
+            <span className="w-8 h-8 flex items-center justify-center rounded-full bg-[#F3FAFC] text-sm text-[#6B6B6B] font-medium">7</span>
           </div>
         </div>
       </div>

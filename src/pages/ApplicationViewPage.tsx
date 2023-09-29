@@ -81,7 +81,7 @@ const ApplicationViewPage = () => {
   return (
     <MainLayout title="FE Task Test - Application Overview">
       <div className="w-full h-screen flex flex-col lg:flex-row items-start justify-start gap-6 py-4 px-6 overflow-y-auto overflow-x-hidden">
-        <div className="w-full lg:flex-[1.2] flex flex-col gap-3 items-start justify-start lg:sticky lg:top-6">
+        <div className="w-full lg:flex-[1] flex flex-col gap-3 items-start justify-start lg:sticky lg:top-6">
           <div className="flex flex-col items-center justify-start w-full h-12 gap-3 bg-white shadow-selectShad rounded-lg relative">
             <div
               onClick={() => setOpenSelect(!openSelect)}
@@ -230,7 +230,7 @@ const ApplicationViewPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:flex-[2.5] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden">
+        <div className="w-full lg:flex-[2] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden">
           <ApplicationUserProfileDetail />
         </div>
       </div>
