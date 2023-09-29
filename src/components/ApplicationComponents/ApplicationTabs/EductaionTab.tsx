@@ -18,6 +18,12 @@ const EductaionTab = () => {
                 className="w-6 h-6"
               />
             </span>
+            <div className="flex flex-col items-start justify-start gap-2">
+              <h4 className="text-dark font-medium text-sm">
+                Bachelor in Biochemistry
+              </h4>
+              <h2 className="text-dark font-normal text-sm"></h2>
+            </div>
           </div>
         ))}
       </div>
