@@ -10,14 +10,13 @@ import {
   opportunityRecommendData,
   opportunityStage,
 } from "../utils/constant";
-import { DetailedOverview, RecommendedChart } from "../components";
+import { RecommendedChart } from "../components";
 import { useParams } from "react-router-dom";
 
 const OpportunityDetailsPage = () => {
   const params = useParams();
 
   const data = opportunityOverviewsData.find((item) => item.id === params.id);
-  console.log(data);
 
   return (
     <MainLayout
