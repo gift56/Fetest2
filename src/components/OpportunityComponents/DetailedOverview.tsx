@@ -230,7 +230,7 @@ const DetailedOverview = () => {
         </div>
       </div>
       <div className="w-full flex flex-col items-start justify-start gap-8">
-        {opportunityOverviewsData.map((item) => (
+        {filteredData.map((item) => (
           <div
             key={item.id}
             className="w-full bg-white h-[80vh] p-6 rounded-2xl overflow-x-hidden overflow-y-auto flex flex-col items-start justify-start gap-5"
