@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { sortSelction } from "../../../utils/constant";
+import { additionalQuestionsData, sortSelction } from "../../../utils/constant";
 
 type SortItem = {
   selected: boolean;
@@ -51,6 +51,8 @@ const VideoTab = () => {
     }
   };
 
+  const sortFilterData = sortData.filter((item) => item.selected);
+
   return (
     <div
       id="video"
@@ -60,10 +62,10 @@ const VideoTab = () => {
         <h2 className="text-sm font-semibold text-dark">
           Additional Questions
         </h2>
-        <div className="w-[200px] h-10 border border-[#EBEBEB] rounded-lg px-3 relative flex items-center justify-start select-none cursor-pointer">
+        <div className="w-[200px] h-10 border border-[#EBEBEB] rounded-lg relative flex items-center justify-start select-none cursor-pointer">
           <span
             onClick={() => setOpenSortQuestion(true)}
-            className="text-sm font-normal text-dark"
+            className="text-sm font-normal text-dark w-full h-full flex items-center justify-start px-3 rounded-2xl"
           >
             Sort
           </span>
@@ -79,7 +81,7 @@ const VideoTab = () => {
               <div
                 onClick={() => updateSelected(item.option)}
                 key={item.option}
-                className="w-full items-center rounded-2xl flex justify-between gap-4 shadow-selectShad hover:bg-hovergray cursor-pointer transition-all duration-300 text-dark py-4 px-4"
+                className="w-full items-center flex justify-start gap-4 hover:bg-hovergray cursor-pointer transition-all duration-300 text-dark py-4 px-4"
               >
                 <input
                   type="checkbox"
@@ -97,7 +99,11 @@ const VideoTab = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col items-start justify-start gap-5"></div>
+      <div className="w-full flex flex-col items-start justify-start gap-5">
+        {sortFilterData.map((item, i) => (
+          <div key={i}></div>
+        ))}
+      </div>
     </div>
   );
 };
