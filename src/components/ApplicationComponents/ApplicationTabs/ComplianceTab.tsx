@@ -1,7 +1,12 @@
+import { useState } from "react";
 import { FiEye } from "react-icons/fi";
 import { LiaFileDownloadSolid } from "react-icons/lia";
+import { sortSelction } from "../../../utils/constant";
 
 const ComplianceTab = () => {
+  const [openSort, setOpenSort] = useState(false);
+  const [sortData, setSortData] = useState(sortSelction);
+
   return (
     <div
       id="compliance"
