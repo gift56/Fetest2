@@ -129,7 +129,7 @@ const VideoTab = () => {
             key={i}
             className="w-full flex flex-col items-start justify-start"
           >
-            <div className="border-b w-[90%] ml-auto">
+            <div className="border-b w-[94%] ml-auto">
               <span
                 className={`w-fit px-4 pt-2 rounded-tl-md rounded-tr-md ${statusColor(
                   item.cat
@@ -139,11 +139,13 @@ const VideoTab = () => {
               </span>
             </div>
             <div className="w-full flex items-start justify-start gap-5 py-5">
-              <div
-                className={`!w-1 !h-1 block rounded-full p-5 ${statusCheckColor(
-                  item.cat
-                )}`}
-              ></div>
+              <div className="flex-shrink">
+                <div
+                  className={`w-6 h-6 bg-red-500 rounded-full ${statusCheckColor(
+                    item.cat
+                  )}`}
+                ></div>
+              </div>
               <div className="flex-grow flex items-start justify-start flex-col gap-1">
                 <h3 className="text-sm font-light text-black">
                   {item.content}
@@ -165,9 +167,7 @@ const VideoTab = () => {
                     ))}
                   </p>
                 )}
-                {item.img && (
-                  <img src={item.img} alt="video_image" />
-                )}
+                {item.img && <img src={item.img} alt="video_image" />}
               </div>
             </div>
           </div>
