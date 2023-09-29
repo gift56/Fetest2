@@ -139,9 +139,9 @@ const VideoTab = () => {
               </span>
             </div>
             <div className="w-full flex items-start justify-start gap-5">
-              <div className="">
+              <div>
                 <span
-                  className={`w-6 h-6 block rounded-full p-5 ${statusCheckColor(
+                  className={`w-3 h-3 block rounded-full p-5 ${statusCheckColor(
                     item.cat
                   )}`}
                 ></span>
@@ -151,7 +151,7 @@ const VideoTab = () => {
                   {item.content}
                 </h3>
                 {item.reply && (
-                  <p className="bg-[#F8FAFF] rounded-2xl p-3 text-[#216C84]">
+                  <p className="bg-[#F8FAFF] rounded-2xl p-3 tex-sm font-normal text-[#216C84]">
                     {item.reply}
                   </p>
                 )}
