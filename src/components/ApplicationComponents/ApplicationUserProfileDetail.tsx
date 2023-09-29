@@ -26,10 +26,10 @@ const ApplicationUserProfileDetail = () => {
             </h2>
             <p className="flex items-center justify-start text-xs font-light text-black">
               <span className="border-r border-black pr-2">Saudi Arabia</span>
-              <span className="border-r border-black pr-2">
+              <span className="border-r border-black px-2">
                 aaliyahs@gmail.com
               </span>
-              <span className="border-r border-black pr-2">
+              <span className="px-3">
                 +00 000 000 0000
               </span>
             </p>
