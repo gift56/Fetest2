@@ -7,6 +7,7 @@ import {
 } from "../utils/constant";
 import { BiChevronDown } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
+import { PiWarningCircleLight } from "react-icons/pi";
 
 interface Data {
   id: string;
@@ -79,7 +80,7 @@ const ApplicationViewPage = () => {
   return (
     <MainLayout title="FE Task Test - Application Overview">
       <div className="w-full h-screen flex flex-col lg:flex-row items-start justify-start gap-6 py-4 px-6 overflow-y-auto overflow-x-hidden">
-        <div className="w-full lg:flex-[1] flex flex-col gap-3 items-start justify-start lg:sticky lg:top-6">
+        <div className="w-full lg:flex-[1.2] flex flex-col gap-3 items-start justify-start lg:sticky lg:top-6">
           <div className="flex flex-col items-center justify-start w-full h-12 gap-3 bg-white shadow-selectShad rounded-lg relative">
             <div
               onClick={() => setOpenSelect(!openSelect)}
@@ -128,6 +129,35 @@ const ApplicationViewPage = () => {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+          <div className="w-full flex items-center justify-between gap-2">
+            <div className="w-full h-12 bg-white border border-[#F3F3F3] rounded-lg flex items-center justify-between">
+              <button
+                type="submit"
+                className="px-3 h-full flex items-center justify-center text-inputgray"
+              >
+                <GoSearch className="w-5 h-5" />
+              </button>
+              <input
+                type="text"
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full h-full text-sm font-normal text-inputgray outline-none border-none"
+                placeholder="Serach by name, edu, exp or #tag"
+              />
+              <button
+                type="button"
+                className="pr-3 h-full flex items-center justify-center text-inputgray"
+              >
+                <PiWarningCircleLight className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="w-14 h-12 flex items-center justify-center bg-white shadow-selectShad rounded-lg">
+              <img
+                src="/filterIcon.png"
+                alt="filter-icon"
+                className="w-5 h-5"
+              />
             </div>
           </div>
         </div>
