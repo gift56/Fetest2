@@ -22,7 +22,15 @@ const EductaionTab = () => {
               <h4 className="text-dark font-medium text-sm">
                 Bachelor in Biochemistry
               </h4>
-              <h2 className="text-dark font-normal text-sm"></h2>
+              <h2 className="text-black font-normal text-sm flex items-center justify-start">
+                <span className=" pr-2">King Saud University</span>
+                <span className="text-[#B8B8B8] font-light px-3 border-x">
+                  Saudi Arabia
+                </span>
+                <span className="text-[#B8B8B8] font-light pl-3">
+                  Jan 2022 - Jan 2023
+                </span>
+              </h2>
             </div>
           </div>
         ))}
