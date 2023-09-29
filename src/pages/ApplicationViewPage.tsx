@@ -1,4 +1,5 @@
 import MainLayout from "../layout/MainLayout";
+import { candidateData } from "../utils/constant";
 import { BiChevronDown } from "react-icons/bi";
 
 interface Data {
