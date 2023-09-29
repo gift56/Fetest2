@@ -1,7 +1,15 @@
+import { FaRegCircleUser } from "react-icons/fa6";
+import { BsCalendar2Event } from "react-icons/bs";
+import { LuUserSquare, LuUser } from "react-icons/lu";
+
 const ProfileTab = () => {
-  const profileData = [{
-    
-  }];
+  const profileData = [
+    {
+      icon: FaRegCircleUser,
+      headline: "Nationality",
+      detail: "Sri Lankan",
+    },
+  ];
   return (
     <div
       id="profile"
