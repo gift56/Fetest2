@@ -25,13 +25,18 @@ const ProfileTab = () => {
       detail: "00-00-0000",
     },
   ];
+
   return (
     <div
       id="profile"
       className="w-full bg-white rounded-2xl p-5 flex flex-col items-start justify-start"
     >
       <h2 className="text-sm font-semibold text-dark">Personal Information</h2>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start justify-start"></div>
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 items-start justify-start">
+        {profileData.map((item, i) => (
+          <div key={i} className="w-full flex items-center justify-start gap-5"></div>
+        ))}
+      </div>
     </div>
   );
 };
