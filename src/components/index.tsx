@@ -1,3 +1,5 @@
+import ProfileTab from "./ApplicationComponents/ApplicationTabs/ProfileTab";
+import ApplicationUserProfileDetail from "./ApplicationComponents/ApplicationUserProfileDetail";
 import DetailedOverview from "./OpportunityComponents/DetailedOverview";
 import OpportunityTable from "./OpportunityComponents/OpportunityTable";
 import RecommendedChart from "./OpportunityComponents/RecommendedChart";
@@ -10,4 +12,6 @@ export {
   RecommendedChart,
   DetailedOverview,
   OpportunityTable,
+  ApplicationUserProfileDetail,
+  ProfileTab,
 };

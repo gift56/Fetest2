@@ -229,7 +229,9 @@ const ApplicationViewPage = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:flex-[2.5] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden"></div>
+        <div className="w-full lg:flex-[2.5] flex flex-col items-start justify-start h-screen overflow-y-auto overflow-x-hidden">
+          
+        </div>
       </div>
     </MainLayout>
   );
