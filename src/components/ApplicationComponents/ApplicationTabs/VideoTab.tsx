@@ -141,7 +141,7 @@ const VideoTab = () => {
             <div className="w-full flex items-start justify-start gap-5">
               <div className="flex-shrink">
                 <span
-                  className={`w-6 h-6 ${statusCheckColor(item.cat)}`}
+                  className={`w-6 h-6 rounded-full ${statusCheckColor(item.cat)}`}
                 ></span>
               </div>
               <div className="flex-grow"></div>
