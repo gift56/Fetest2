@@ -89,8 +89,8 @@ const ApplicationViewPage = () => {
   return (
     <MainLayout title="FE Task Test - Application Overview">
       <div className="w-full h-screen flex flex-col lg:flex-row items-start justify-start gap-6 py-4 px-6 overflow-y-auto overflow-x-hidden">
-        <div className="w-full lg:flex-[1] flex flex-col gap-3 items-start justify-start lg:sticky lg:top-20">
-          <div className="flex flex-col items-center justify-start w-full h-12 gap-3 bg-white shadow-selectShad rounded-lg relative">
+        <div className="w-full lg:flex-[1] flex flex-col gap-3 items-start justify-start lg:h-[94vh] lg:sticky lg:top-0">
+          <div className="flex flex-col items-center justify-start w-full py-2 gap-3 bg-white shadow-selectShad rounded-lg relative">
             <div
               onClick={() => setOpenSelect(!openSelect)}
               className="w-full flex items-center justify-between cursor-pointer h-full px-4 text-[#384A69]"
