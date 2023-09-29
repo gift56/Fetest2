@@ -4,7 +4,11 @@ import { candidateData, selectOptions, tabLinks } from "../utils/constant";
 import { BiChevronDown } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
 import { PiWarningCircleLight } from "react-icons/pi";
-import { ApplicationUserProfileDetail, ProfileTab } from "../components";
+import {
+  ApplicationUserProfileDetail,
+  EductaionTab,
+  ProfileTab,
+} from "../components";
 import { BsChevronRight } from "react-icons/bs";
 
 interface Data {
@@ -249,6 +253,7 @@ const ApplicationViewPage = () => {
                 <a
                   key={item.text}
                   href={item.id}
+                  onClick={() => setTab(item.text)}
                   className={`text-sm font-medium px-8 py-2 relative inline-block cursor-pointer ${
                     item.text === tab
                       ? "text-primary border-b-2 border-primary"
@@ -268,6 +273,7 @@ const ApplicationViewPage = () => {
           </div>
           <div className="w-full flex flex-col items-start justify-start gap-5">
             <ProfileTab />
+            <EductaionTab />
           </div>
         </div>
       </div>
